@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Careers — ENVIRO ENABLERS | Build a Cleaner Future</title>
+    <meta name="description" content="Join Enviro Enablers — careers in climate-tech, waste-to-energy and industrial decarbonization. Submit your bio and let's build a cleaner future together." />
+    <link rel="canonical" href="https://www.enviroenablers.com/careers.html" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.enviroenablers.com/careers.html" />
+    <meta property="og:title" content="Careers — ENVIRO ENABLERS" />
+    <meta property="og:description" content="Work at the intersection of climate action and industry. Submit your bio to Enviro Enablers." />
+    <meta property="og:image" content="https://www.enviroenablers.com/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --paper: #faf8f5;
+            --sand: #f0ebe0;
+            --clay: #e5dcd0;
+            --ink: #111111;
+            --ink-light: #333333;
+            --ink-muted: #666666;
+            --ink-faint: #999999;
+            --emerald: #059669;
+            --emerald-light: #10b981;
+            --emerald-pale: #d1fae5;
+            --emerald-deep: #047857;
+            --rust: #c2410c;
+            --rust-light: #ea580c;
+            --rust-pale: #ffedd5;
+            --slate: #1e293b;
+            --slate-light: #334155;
+            --white: #ffffff;
+            --border: #e8e2d8;
+            --border-light: #f0ebe5;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.03);
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.07);
+            --maxw: 1280px;
+            --ease: cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'DM Sans', system-ui, sans-serif;
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .maxw { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+        a { color: var(--emerald-deep); text-decoration: none; }
+        a:hover { color: var(--emerald-light); }
+
+        /* NAV */
+        header { position: sticky; top: 0; z-index: 50; background: rgba(250, 248, 245, 0.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-light); }
+        nav { max-width: var(--maxw); margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; }
+        .brand { display: flex; align-items: center; }
+        .brand-logo { height: 40px; width: auto; }
+        .navlinks { display: flex; align-items: center; gap: 28px; }
+        .navlinks a.nl { color: var(--ink-light); font-size: 14.5px; font-weight: 600; letter-spacing: 0.2px; transition: color .2s; }
+        .navlinks a.nl:hover { color: var(--emerald); }
+        .navlinks a.nl.active { color: var(--emerald-deep); border-bottom: 2px solid var(--emerald); padding-bottom: 4px; }
+        .btn { display: inline-block; background: var(--emerald); color: #fff !important; padding: 10px 20px; border-radius: 8px; font-size: 14px; font-weight: 700; transition: background .2s, transform .15s; border: 0; cursor: pointer; }
+        .btn:hover { background: var(--emerald-deep); transform: translateY(-1px); }
+        .menu-btn { display: none; background: none; border: 0; cursor: pointer; color: var(--ink); }
+        .mobnav { display: none; }
+        @media (max-width: 900px) {
+            .navlinks { display: none; }
+            .menu-btn { display: block; }
+            .mobnav { display: flex; flex-direction: column; gap: 0; background: var(--paper); border-top: 1px solid var(--border-light); padding: 8px 24px 16px; }
+            .mobnav.closed { display: none; }
+            .mobnav a { padding: 12px 0; color: var(--ink-light); font-weight: 600; font-size: 15px; border-bottom: 1px solid var(--border-light); }
+            .mobnav a:last-child { border-bottom: 0; }
+        }
+
+        /* HERO */
+        .hero { padding: 96px 0 72px; background: linear-gradient(160deg, #f0fdf4 0%, var(--paper) 55%, #fffbeb 100%); border-bottom: 1px solid var(--border-light); text-align: center; }
+        .kicker { display: inline-block; background: var(--emerald-pale); color: var(--emerald-deep); font-size: 12.5px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 14px; border-radius: 999px; margin-bottom: 22px; }
+        .hero h1 { font-size: clamp(34px, 4.6vw, 56px); line-height: 1.08; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 18px; max-width: 760px; margin-left: auto; margin-right: auto; }
+        .hero h1 em { font-style: normal; color: var(--emerald); }
+        .hero p.lede { font-size: 18px; color: var(--ink-muted); max-width: 620px; margin: 0 auto 30px; }
+
+        /* VALUES */
+        section { padding: 84px 0; }
+        .sec-head { max-width: 720px; margin-bottom: 44px; }
+        .sec-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+        .sec-head h2 { font-size: clamp(28px, 3.4vw, 40px); font-weight: 800; letter-spacing: -1px; line-height: 1.15; margin-bottom: 12px; }
+        .sec-head p { color: var(--ink-muted); font-size: 16.5px; }
+        .value-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .value { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 26px; }
+        .value .ico { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: var(--emerald-pale); color: var(--emerald-deep); font-size: 20px; font-weight: 800; margin-bottom: 14px; }
+        .value h3 { font-size: 16.5px; font-weight: 800; margin-bottom: 6px; }
+        .value p { font-size: 14px; color: var(--ink-muted); }
+
+        /* OPEN ROLES */
+        .roles { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+        .role { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 26px; display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; transition: box-shadow .2s; }
+        .role:hover { box-shadow: var(--shadow); }
+        .role h3 { font-size: 17px; font-weight: 800; margin-bottom: 4px; }
+        .role .dept { font-size: 12.5px; color: var(--emerald-deep); font-weight: 700; margin-bottom: 8px; }
+        .role p { font-size: 14px; color: var(--ink-muted); }
+        .role .loc { display: inline-block; margin-top: 12px; font-size: 12px; font-weight: 700; color: var(--ink-muted); background: var(--sand); padding: 4px 10px; border-radius: 999px; }
+        .role .apply { flex-shrink: 0; margin-top: 4px; }
+
+        /* FORM */
+        .form-wrap { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 48px; align-items: start; }
+        .form-card { background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 36px; box-shadow: var(--shadow-lg); }
+        .form-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+        .form-card .sub { color: var(--ink-muted); font-size: 14px; margin-bottom: 24px; }
+        .field { margin-bottom: 18px; }
+        .field label { display: block; font-size: 13px; font-weight: 700; color: var(--ink-light); margin-bottom: 6px; }
+        .field label span { color: var(--rust); }
+        .field input, .field select, .field textarea {
+            width: 100%; padding: 12px 14px; border: 1.5px solid var(--border); border-radius: 10px;
+            font-family: inherit; font-size: 14.5px; color: var(--ink); background: var(--paper); transition: border-color .2s, box-shadow .2s;
+        }
+        .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--emerald); box-shadow: 0 0 0 3px var(--emerald-pale); }
+        .field textarea { resize: vertical; min-height: 130px; }
+        .form-note { font-size: 12.5px; color: var(--ink-faint); margin-top: 14px; }
+        .form-side h3 { font-size: 20px; font-weight: 800; margin-bottom: 12px; }
+        .form-side p { color: var(--ink-muted); font-size: 15px; margin-bottom: 18px; }
+        .form-side ul { list-style: none; }
+        .form-side li { padding: 14px 0; border-bottom: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; font-size: 14.5px; color: var(--ink-light); }
+        .form-side li b { color: var(--ink); }
+        .form-side .dot { color: var(--emerald); font-weight: 800; }
+
+        /* CTA */
+        .cta { background: linear-gradient(135deg, var(--emerald-deep), var(--emerald)); border-radius: 24px; padding: 48px; color: #fff; text-align: center; }
+        .cta h2 { font-size: clamp(26px, 3vw, 34px); font-weight: 800; letter-spacing: -1px; margin-bottom: 10px; }
+        .cta p { color: rgba(255, 255, 255, 0.85); max-width: 560px; margin: 0 auto 22px; font-size: 15.5px; }
+        .cta a.btn { background: #fff; color: var(--emerald-deep) !important; }
+
+        /* FOOTER */
+        footer { background: var(--ink); color: #cbd5e1; padding: 64px 0 32px; margin-top: 40px; }
+        .footer-grid { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 48px; }
+        .footer-grid h5 { color: #fff; font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; }
+        .footer-grid ul { list-style: none; }
+        .footer-grid ul li { margin-bottom: 10px; }
+        .footer-grid ul a { color: #94a3b8; font-size: 14.5px; }
+        .footer-grid ul a:hover { color: var(--emerald-light); }
+        .brand-desc { color: #94a3b8; font-size: 14.5px; margin: 14px 0 18px; max-width: 320px; }
+        .socials a { color: #94a3b8; margin-right: 14px; display: inline-block; }
+        .socials a:hover { color: var(--emerald-light); }
+        .footer-bottom { max-width: var(--maxw); margin: 44px auto 0; padding: 20px 24px 0; border-top: 1px solid #1f2937; display: flex; justify-content: space-between; font-size: 13px; color: #64748b; flex-wrap: wrap; gap: 8px; }
+        @media (max-width: 900px) {
+            .value-grid { grid-template-columns: 1fr 1fr; }
+            .roles { grid-template-columns: 1fr; }
+            .form-wrap { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+        }
+        @media (max-width: 560px) { .value-grid { grid-template-columns: 1fr; } .cta { padding: 36px 24px; } .form-card { padding: 26px; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a class="brand" href="index.html">
+                <img class="brand-logo" src="logo.svg" alt="Enviro Enablers">
+            </a>
+            <div class="navlinks">
+                <a class="nl" href="index.html#solutions">Solutions</a>
+                <a class="nl" href="index.html#products">Products</a>
+                <a class="nl" href="index.html#impact">Impact</a>
+                <a class="nl" href="sustainability.html">Sustainability</a>
+                <a class="nl active" href="careers.html">Careers</a>
+                <a class="btn nav-cta" href="index.html#contact">Get in touch</a>
+                <a class="nl" href="https://founder.enviroenablers.com" target="_blank" style="color:#4ade80;font-weight:600;">Login</a>
+            </div>
+            <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" onclick="toggleMenu()">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+        </nav>
+        <div id="mobnav" class="mobnav closed">
+            <a href="index.html#solutions" onclick="closeMenu()">Solutions</a>
+            <a href="index.html#products" onclick="closeMenu()">Products</a>
+            <a href="index.html#impact" onclick="closeMenu()">Impact</a>
+            <a href="sustainability.html" onclick="closeMenu()">Sustainability</a>
+            <a href="careers.html" onclick="closeMenu()">Careers</a>
+            <a href="index.html#contact" onclick="closeMenu()">Contact</a>
+            <a href="https://founder.enviroenablers.com" target="_blank" onclick="closeMenu()" style="color:#4ade80;">Login</a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="maxw">
+            <span class="kicker">Careers at Enviro Enablers</span>
+            <h1>Build the <em>clean industrial</em> future.</h1>
+            <p class="lede">We're a climate-tech company turning waste into verified industrial energy. If you want your work to measurably cut carbon emissions — in cement, power and FMCG — you'll fit right in.</p>
+            <a class="btn" href="#apply">Submit your bio</a>
+        </div>
+    </div>
+
+    <!-- VALUES -->
+    <section style="padding-top:72px;">
+        <div class="maxw">
+            <div class="sec-head center">
+                <h2>Why Enviro Enablers?</h2>
+                <p>Mission-driven work, real engineering, and measurable impact — every project we deliver has a number attached to it.</p>
+            </div>
+            <div class="value-grid">
+                <div class="value">
+                    <div class="ico">🎯</div>
+                    <h3>Outcome-first</h3>
+                    <p>We measure success in tonnes of CO₂e avoided and waste diverted — not just activity.</p>
+                </div>
+                <div class="value">
+                    <div class="ico">🔬</div>
+                    <h3>Real engineering</h3>
+                    <p>Feedstock R&D, fuel formulation, plant operations — hands-on work from day one.</p>
+                </div>
+                <div class="value">
+                    <div class="ico">🌱</div>
+                    <h3>Climate impact</h3>
+                    <p>Directly replace coal and petcoke with circular, low-carbon fuel at industrial scale.</p>
+                </div>
+                <div class="value">
+                    <div class="ico">📈</div>
+                    <h3>Grow fast</h3>
+                    <p>A lean team where ownership is real and growth tracks impact, not tenure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPEN ROLES -->
+    <section style="padding-top:0;">
+        <div class="maxw">
+            <div class="sec-head">
+                <h2>Open roles</h2>
+                <p>Don't see your role? We're always looking for great people — submit your bio anyway, we keep it on file.</p>
+            </div>
+            <div class="roles">
+                <div class="role">
+                    <div>
+                        <h3>Business Development Manager</h3>
+                        <div class="dept">Sales · Cement &amp; Power</div>
+                        <p>Own client relationships with cement, power and FMCG plants; drive alternate-fuel adoption and long-term supply agreements.</p>
+                        <span class="loc">Delhi NCR / On-field</span>
+                    </div>
+                    <a class="btn apply" href="#apply">Apply</a>
+                </div>
+                <div class="role">
+                    <div>
+                        <h3>Supply Chain &amp; Procurement Lead</h3>
+                        <div class="dept">Operations</div>
+                        <p>Build and manage feedstock collection networks — agri-residue and non-recyclable plastic — across North and South India.</p>
+                        <span class="loc">Delhi NCR / On-field</span>
+                    </div>
+                    <a class="btn apply" href="#apply">Apply</a>
+                </div>
+                <div class="role">
+                    <div>
+                        <h3>Chemical / Mechanical Engineer</h3>
+                        <div class="dept">Engineering</div>
+                        <p>Fuel formulation, quality testing, densification plant operations and process improvement for briquettes and pellets.</p>
+                        <span class="loc">Plant locations</span>
+                    </div>
+                    <a class="btn apply" href="#apply">Apply</a>
+                </div>
+                <div class="role">
+                    <div>
+                        <h3>Carbon &amp; ESG Analyst</h3>
+                        <div class="dept">Sustainability</div>
+                        <p>Emission accounting, data verification, carbon credit documentation and client ESG reporting support.</p>
+                        <span class="loc">Delhi NCR / Hybrid</span>
+                    </div>
+                    <a class="btn apply" href="#apply">Apply</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APPLY FORM -->
+    <section id="apply" style="background:var(--sand);">
+        <div class="maxw">
+            <div class="sec-head center">
+                <h2>Submit your bio</h2>
+                <p>Tell us who you are and what you'd love to work on. We review every submission.</p>
+            </div>
+            <div class="form-wrap">
+                <div class="form-side">
+                    <h3>What happens next?</h3>
+                    <p>No portals, no black holes. Your bio goes straight to our hiring team.</p>
+                    <ul>
+                        <li><span class="dot">1.</span><span><b>You submit</b> — your bio and details land in our team's inbox.</span></li>
+                        <li><span class="dot">2.</span><span><b>We review</b> — a real person reads every submission within a week.</span></li>
+                        <li><span class="dot">3.</span><span><b>We talk</b> — short intro call, then deeper conversations for shortlisted candidates.</span></li>
+                        <li><span class="dot">4.</span><span><b>You build</b> — join a team where your work has a measurable climate impact.</span></li>
+                    </ul>
+                    <p style="margin-top:22px;font-size:14px;color:var(--ink-muted);">Prefer email? Write to us directly at <a href="mailto:careers@enviroenablers.com">careers@enviroenablers.com</a>.</p>
+                </div>
+                <form class="form-card" id="careerForm" onsubmit="return submitBio(event)">
+                    <h3>Your bio</h3>
+                    <p class="sub">Fields marked <span style="color:var(--rust);">*</span> are required.</p>
+                    <div class="field">
+                        <label for="name">Full name <span>*</span></label>
+                        <input type="text" id="name" name="name" required placeholder="e.g. Priya Sharma" />
+                    </div>
+                    <div class="field">
+                        <label for="email">Email <span>*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="you@example.com" />
+                    </div>
+                    <div class="field">
+                        <label for="phone">Phone / WhatsApp</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" />
+                    </div>
+                    <div class="field">
+                        <label for="role">Role of interest <span>*</span></label>
+                        <select id="role" name="role" required>
+                            <option value="">Select a role</option>
+                            <option>Business Development Manager</option>
+                            <option>Supply Chain &amp; Procurement Lead</option>
+                            <option>Chemical / Mechanical Engineer</option>
+                            <option>Carbon &amp; ESG Analyst</option>
+                            <option>Operations / Plant</option>
+                            <option>Finance &amp; Accounts</option>
+                            <option>Other / Open to anything</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="experience">Years of experience <span>*</span></label>
+                        <select id="experience" name="experience" required>
+                            <option value="">Select</option>
+                            <option>0–2 years</option>
+                            <option>2–5 years</option>
+                            <option>5–10 years</option>
+                            <option>10+ years</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="location">Preferred location</label>
+                        <input type="text" id="location" name="location" placeholder="e.g. Delhi NCR, Bengaluru, Remote" />
+                    </div>
+                    <div class="field">
+                        <label for="bio">Your bio <span>*</span></label>
+                        <textarea id="bio" name="bio" required placeholder="Who are you? What have you done? What do you want to build here? (Include LinkedIn / portfolio links if you have them.)"></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width:100%;padding:14px;">Submit my bio</button>
+                    <p class="form-note" id="formMsg" style="display:none;"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+        <div class="maxw">
+            <div class="cta">
+                <h2>Know someone perfect for this?</h2>
+                <p>Share this page — great people find great teams through great networks.</p>
+                <a class="btn" href="https://www.linkedin.com/company/enviro-enablers" target="_blank" rel="noopener">Follow us on LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <a class="brand" href="index.html">
+                    <img class="brand-logo" src="logo.svg" alt="Enviro Enablers">
+                </a>
+                <p class="brand-desc">Enviro Enablers India Private Limited — an outcome-first decarbonization partner turning waste into verified industrial energy.</p>
+                <div class="socials">
+                    <a href="https://in.linkedin.com/company/enviro-enablers" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.64 4.75 6.07V21H17v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21H9z"/></svg></a>
+                    <a href="mailto:contact@climatecircle.com" aria-label="Email"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg></a>
+                </div>
+            </div>
+            <div>
+                <h5>Browse</h5>
+                <ul>
+                    <li><a href="index.html#solutions">Solutions</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#impact">Impact</a></li>
+                    <li><a href="sustainability.html">Sustainability</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Get in touch</h5>
+                <ul>
+                    <li><a href="mailto:contact@climatecircle.com">contact@climatecircle.com</a></li>
+                    <li><a href="tel:+918448014605">+91 8448014605</a></li>
+                    <li>D-29, Anand Niketan,<br>New Delhi-110021</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Enviro Enablers India Private Limited. All rights reserved.</span>
+            <span>ENVIRO ENABLERS</span>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobnav').classList.toggle('closed');
+        }
+        function closeMenu() {
+            document.getElementById('mobnav').classList.add('closed');
+        }
+        function submitBio(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const role = document.getElementById('role').value;
+            const exp = document.getElementById('experience').value;
+            const loc = document.getElementById('location').value.trim();
+            const bio = document.getElementById('bio').value.trim();
+            if (!name || !email || !role || !exp || !bio) return false;
+
+            const subject = encodeURIComponent('Career Application — ' + name + ' (' + role + ')');
+            const body = encodeURIComponent(
+                'Name: ' + name + '\n' +
+                'Email: ' + email + '\n' +
+                (phone ? 'Phone: ' + phone + '\n' : '') +
+                'Role of interest: ' + role + '\n' +
+                'Experience: ' + exp + '\n' +
+                (loc ? 'Preferred location: ' + loc + '\n' : '') +
+                '\n--- BIO ---\n' + bio + '\n'
+            );
+            const msg = document.getElementById('formMsg');
+            msg.style.display = 'block';
+            msg.textContent = 'Opening your email app — please press send to complete your submission.';
+            msg.style.color = 'var(--emerald-deep)';
+            window.location.href = 'mailto:careers@enviroenablers.com?subject=' + subject + '&body=' + body;
+            return false;
+        }
+    </script>
+</body>
+</html>
