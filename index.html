@@ -1484,8 +1484,14 @@
   content:"";
   position:absolute; inset:0; z-index:1; pointer-events:none;
   background:
-    linear-gradient(90deg, rgba(2,8,12,.97) 0%, rgba(2,8,12,.94) 34%, rgba(2,8,12,.74) 60%, rgba(2,8,12,.40) 84%, rgba(2,8,12,.22) 100%),
-    linear-gradient(0deg, rgba(0,0,0,.86) 0%, rgba(0,0,0,.10) 55%, rgba(0,0,0,0) 100%);
+    linear-gradient(90deg, rgba(2,8,12,.66) 0%, rgba(2,8,12,.50) 30%, rgba(2,8,12,.24) 56%, rgba(2,8,12,.06) 78%, rgba(2,8,12,0) 100%),
+    linear-gradient(0deg, rgba(2,8,12,.62) 0%, rgba(2,8,12,.08) 34%, rgba(2,8,12,0) 62%);
+}
+/* soft pool of shade behind the headline only — the rest of the photo stays clear */
+.hero::after{
+  content:"";
+  position:absolute; left:-6%; top:8%; width:62%; height:84%; z-index:1; pointer-events:none;
+  background:radial-gradient(ellipse at 34% 46%, rgba(2,8,12,.62) 0%, rgba(2,8,12,.34) 42%, rgba(2,8,12,0) 72%);
 }
 /* slideshow sits edge-to-edge behind everything */
 .hero .hero-slider{
@@ -1504,7 +1510,15 @@
 /* copy always on top */
 .hero .wrap{ position:relative; z-index:3; width:100%; }
 .hero-grid{ display:grid; grid-template-columns:1fr; gap:0; align-items:center; }
-.hero h1{ color:#fff; }
+.hero h1{
+  color:#fff;
+  font-size:clamp(1.9rem, 3.5vw, 3rem);
+  font-weight:600;
+  line-height:1.16;
+  letter-spacing:-0.015em;
+  text-shadow:0 2px 26px rgba(0,0,0,.55), 0 1px 3px rgba(0,0,0,.4);
+}
+.hero h1 .highlight{ text-shadow:0 2px 30px rgba(0,0,0,.6); }
 .hero h1 .highlight{ color:#34d399; }
 .hero .eyebrow{ color:#34d399; }
 .hero .hero-desc{ color:rgba(241,245,249,.9); max-width:640px; }
@@ -1530,6 +1544,7 @@
 .hero .btn-outline:hover{ background:#fff; color:#04110c; }
 @media (max-width:1024px){
   .hero{ min-height:0; padding:96px 24px 80px; }
+  .hero::after{ width:100%; left:0; top:0; height:100%; background:radial-gradient(ellipse at 50% 45%, rgba(2,8,12,.55) 0%, rgba(2,8,12,.20) 60%, rgba(2,8,12,0) 85%); }
   .hero::before{
     background:linear-gradient(180deg, rgba(2,8,12,.86) 0%, rgba(2,8,12,.93) 50%, rgba(2,8,12,.98) 100%);
   }
