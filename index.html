@@ -1658,7 +1658,7 @@
     <!-- HERO v4 : whole photo behind, copy in front, contained ~70% band -->
     <style>
     .hero{
-      width:min(70vw,1180px); margin:26px auto 0; padding:0;
+      width:min(70vw,1000px); margin:26px auto 0; padding:0;
       aspect-ratio:880 / 550; min-height:0;
       display:flex; align-items:center;
       border-radius:22px; overflow:hidden; background:#04090d;
@@ -1692,6 +1692,26 @@
       .hero .wrap{ padding:0; }
       .hero-copy{ max-width:none; padding:0 20px 26px; }
       .hero .hero-slider .slider-dots{ bottom:auto; top:16px; right:16px; }
+    }
+    </style>
+
+    <style>
+    /* HERO mobile: photo whole at native ratio, copy below it — no crop, no stretch */
+    @media (max-width:980px){
+      .hero{
+        width:calc(100% - 24px); margin:14px auto 0;
+        height:auto; min-height:0; aspect-ratio:auto; display:block;
+        border-radius:18px; background:#04090d;
+      }
+      .hero .hero-slider{
+        position:relative; inset:auto; width:100%; height:auto;
+        aspect-ratio:880 / 550; z-index:1;
+      }
+      .hero .hero-slider .slide img{ object-fit:cover; object-position:center; }
+      .hero::before{ display:none; }
+      .hero .wrap{ padding:0; }
+      .hero-copy{ padding:22px 20px 26px; max-width:none; }
+      .hero .hero-slider .slider-dots{ top:auto; bottom:12px; right:14px; }
     }
     </style>
 </head>
