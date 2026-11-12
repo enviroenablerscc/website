@@ -1484,14 +1484,14 @@
   content:"";
   position:absolute; inset:0; z-index:1; pointer-events:none;
   background:
-    linear-gradient(90deg, rgba(2,8,12,.66) 0%, rgba(2,8,12,.50) 30%, rgba(2,8,12,.24) 56%, rgba(2,8,12,.06) 78%, rgba(2,8,12,0) 100%),
+    linear-gradient(90deg, rgba(2,8,12,.66) 0%, rgba(2,8,12,.50) 30%, rgba(2,8,12,.34) 56%, rgba(2,8,12,.12) 78%, rgba(2,8,12,.02) 100%),
     linear-gradient(0deg, rgba(2,8,12,.62) 0%, rgba(2,8,12,.08) 34%, rgba(2,8,12,0) 62%);
 }
 /* soft pool of shade behind the headline only — the rest of the photo stays clear */
 .hero::after{
   content:"";
-  position:absolute; left:-6%; top:8%; width:62%; height:84%; z-index:1; pointer-events:none;
-  background:radial-gradient(ellipse at 34% 46%, rgba(2,8,12,.62) 0%, rgba(2,8,12,.34) 42%, rgba(2,8,12,0) 72%);
+  position:absolute; left:-8%; top:2%; width:82%; height:96%; z-index:1; pointer-events:none;
+  background:radial-gradient(ellipse at 36% 46%, rgba(2,8,12,.70) 0%, rgba(2,8,12,.46) 46%, rgba(2,8,12,.16) 74%, rgba(2,8,12,0) 92%);
 }
 /* slideshow sits edge-to-edge behind everything */
 .hero .hero-slider{
@@ -1536,7 +1536,7 @@
 .hero-intro .hero-metric .val{ color:var(--ink); }
 .hero-intro .hero-metric .val.emerald{ color:#059669; }
 .hero-intro .hero-metric .lbl{ color:var(--ink-muted); }
-.hero h1{ max-width:1000px; }
+.hero h1{ max-width:880px; }
 @media (max-width:768px){
   .hero-intro{ padding:44px 0 4px; }
   .hero-intro .hero-metrics{ grid-template-columns:1fr; gap:16px; }
