@@ -1484,7 +1484,8 @@
     linear-gradient(90deg, rgba(2,8,12,.96) 0%, rgba(2,8,12,.90) 34%, rgba(2,8,12,.62) 62%, rgba(2,8,12,.22) 88%, rgba(2,8,12,.12) 100%),
     linear-gradient(0deg, rgba(0,0,0,.82) 0%, rgba(0,0,0,0) 52%);
 }
-.hero .wrap{ position:relative; z-index:3; }
+.hero .wrap{ position:static; z-index:auto; }
+.hero-grid > div:first-child{ position:relative; z-index:3; }
 .hero-grid{ grid-template-columns:1fr; gap:0; }
 .hero-slider{
   position:absolute; inset:0; z-index:0;
