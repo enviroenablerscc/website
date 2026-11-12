@@ -1619,46 +1619,39 @@
     }
     </style>
 
+    <!-- NEXT GENERATION band -->
     <style>
-    .legacy-band{
-      position:relative; overflow:hidden;
-      background:linear-gradient(115deg, #04120d 0%, #06231a 52%, #04120d 100%);
-      border-top:1px solid rgba(52,211,153,.16);
-      padding:34px 32px;
+    .future{ background:#04090d; }
+    .future-media{ position:relative; overflow:hidden; }
+    .future-img{ display:block; width:100%; height:auto; }
+    .future-scrim{
+      position:absolute; inset:0; pointer-events:none;
+      background:
+        linear-gradient(100deg, rgba(3,9,13,.92) 0%, rgba(3,9,13,.78) 34%, rgba(3,9,13,.30) 62%, rgba(3,9,13,0) 82%),
+        linear-gradient(0deg, rgba(3,9,13,.62) 0%, rgba(3,9,13,0) 48%);
     }
-    .legacy-band::after{
-      content:""; position:absolute; right:-8%; top:-60%; width:46%; height:220%;
-      background:radial-gradient(circle, rgba(16,185,129,.16), transparent 62%);
-      pointer-events:none;
+    .future-wrap{
+      position:absolute; left:0; right:0; bottom:0; margin:0 auto;
+      padding:0 32px 54px;
     }
-    .legacy-inner{
-      position:relative; z-index:1;
-      display:flex; align-items:center; justify-content:space-between; gap:28px; flex-wrap:wrap;
+    .future-copy{ max-width:600px; }
+    .future-copy .eyebrow{ color:#34d399; display:inline-block; margin-bottom:10px; }
+    .future-copy h2{
+      color:#fff; font-size:clamp(1.5rem, 2.5vw, 2.15rem); font-weight:600;
+      line-height:1.22; letter-spacing:-0.01em; margin:0 0 12px;
+      text-shadow:0 2px 24px rgba(0,0,0,.55);
     }
-    .legacy-copy{ max-width:720px; }
-    .legacy-eyebrow{
-      display:inline-block; font-size:.68rem; font-weight:700; letter-spacing:.16em;
-      text-transform:uppercase; color:#34d399; margin-bottom:8px;
+    .future-copy p{
+      color:rgba(255,255,255,.88); font-size:1rem; line-height:1.6;
+      margin:0 0 20px; text-shadow:0 1px 12px rgba(0,0,0,.5);
     }
-    .legacy-line{
-      font-size:clamp(1.15rem, 2vw, 1.6rem); font-weight:600; line-height:1.25;
-      color:#fff; letter-spacing:-0.01em; margin:0 0 6px;
-    }
-    .legacy-sub{
-      font-size:.92rem; line-height:1.55; color:rgba(255,255,255,.68); margin:0;
-    }
-    .legacy-btn{
-      flex:0 0 auto; background:#10b981; color:#04120d; border:1px solid #10b981;
-      font-weight:700; padding:13px 22px; border-radius:999px; white-space:nowrap;
-      transition:transform .18s ease, background .18s ease, box-shadow .18s ease;
-    }
-    .legacy-btn:hover{
-      background:#34d399; border-color:#34d399; transform:translateY(-1px);
-      box-shadow:0 10px 24px rgba(16,185,129,.28);
-    }
-    @media (max-width:720px){
-      .legacy-band{ padding:28px 20px; }
-      .legacy-btn{ width:100%; text-align:center; }
+    @media (max-width:860px){
+      .future-scrim{
+        background:linear-gradient(0deg, rgba(3,9,13,.96) 0%, rgba(3,9,13,.45) 55%, rgba(3,9,13,.08) 100%);
+      }
+      .future-wrap{ position:static; padding:26px 20px 34px; }
+      .future-copy{ max-width:none; }
+      .future-copy p{ font-size:.95rem; }
     }
     </style>
 </head>
@@ -1767,16 +1760,19 @@
         </div>
     </section>
 
-
-    <!-- LEGACY CTA -->
-    <section class="legacy-band">
-        <div class="wrap legacy-inner">
-            <div class="legacy-copy">
-                <span class="legacy-eyebrow">Built to outlive us</span>
-                <p class="legacy-line">Gift this view to the next generation.</p>
-                <p class="legacy-sub">Every tonne of waste we divert is cleaner air, greener land and a future we build with you.</p>
+    <!-- NEXT GENERATION -->
+    <section class="future">
+        <div class="future-media">
+            <img class="future-img" src="future-fields.jpg" alt="Green fields, trees and a village road — the future we are handing over" loading="lazy">
+            <div class="future-scrim" aria-hidden="true"></div>
+            <div class="wrap future-wrap">
+                <div class="future-copy">
+                    <span class="eyebrow">For the next generation</span>
+                    <h2>Every tonne we divert is a gift we hand forward.</h2>
+                    <p>Cleaner air, living land, fuel that spares the earth — built today so the next generation inherits more than we did. Contribute with us.</p>
+                    <a class="btn btn-primary" href="#contact">Contribute with us →</a>
+                </div>
             </div>
-            <a class="btn legacy-btn" href="#contact">Build it with us →</a>
         </div>
     </section>
 
