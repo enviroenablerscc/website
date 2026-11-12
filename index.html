@@ -1618,6 +1618,49 @@
       .hero .hero-slider{ order:2; }
     }
     </style>
+
+    <style>
+    .legacy-band{
+      position:relative; overflow:hidden;
+      background:linear-gradient(115deg, #04120d 0%, #06231a 52%, #04120d 100%);
+      border-top:1px solid rgba(52,211,153,.16);
+      padding:34px 32px;
+    }
+    .legacy-band::after{
+      content:""; position:absolute; right:-8%; top:-60%; width:46%; height:220%;
+      background:radial-gradient(circle, rgba(16,185,129,.16), transparent 62%);
+      pointer-events:none;
+    }
+    .legacy-inner{
+      position:relative; z-index:1;
+      display:flex; align-items:center; justify-content:space-between; gap:28px; flex-wrap:wrap;
+    }
+    .legacy-copy{ max-width:720px; }
+    .legacy-eyebrow{
+      display:inline-block; font-size:.68rem; font-weight:700; letter-spacing:.16em;
+      text-transform:uppercase; color:#34d399; margin-bottom:8px;
+    }
+    .legacy-line{
+      font-size:clamp(1.15rem, 2vw, 1.6rem); font-weight:600; line-height:1.25;
+      color:#fff; letter-spacing:-0.01em; margin:0 0 6px;
+    }
+    .legacy-sub{
+      font-size:.92rem; line-height:1.55; color:rgba(255,255,255,.68); margin:0;
+    }
+    .legacy-btn{
+      flex:0 0 auto; background:#10b981; color:#04120d; border:1px solid #10b981;
+      font-weight:700; padding:13px 22px; border-radius:999px; white-space:nowrap;
+      transition:transform .18s ease, background .18s ease, box-shadow .18s ease;
+    }
+    .legacy-btn:hover{
+      background:#34d399; border-color:#34d399; transform:translateY(-1px);
+      box-shadow:0 10px 24px rgba(16,185,129,.28);
+    }
+    @media (max-width:720px){
+      .legacy-band{ padding:28px 20px; }
+      .legacy-btn{ width:100%; text-align:center; }
+    }
+    </style>
 </head>
 <body>
 
@@ -1721,6 +1764,19 @@
                     <div class="lbl">Tonnes of plastic waste diverted</div>
                 </div>
             </div>
+        </div>
+    </section>
+
+
+    <!-- LEGACY CTA -->
+    <section class="legacy-band">
+        <div class="wrap legacy-inner">
+            <div class="legacy-copy">
+                <span class="legacy-eyebrow">Built to outlive us</span>
+                <p class="legacy-line">Gift this view to the next generation.</p>
+                <p class="legacy-sub">Every tonne of waste we divert is cleaner air, greener land and a future we build with you.</p>
+            </div>
+            <a class="btn legacy-btn" href="#contact">Build it with us →</a>
         </div>
     </section>
 
