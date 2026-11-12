@@ -1512,6 +1512,21 @@
 .hero-metric .val{ color:#34d399; }
 .hero-metric .lbl{ color:rgba(226,232,240,.84); }
 .hero .btn-outline{ border-color:rgba(255,255,255,.6); color:#fff; }
+/* Hero intro band (copy pushed below the image) */
+.hero-intro{ background:var(--white); padding:64px 0 8px; }
+.hero-intro .eyebrow{ color:#059669; }
+.hero-intro .intro-desc{ font-size:1.1rem; color:var(--ink-muted); max-width:760px; line-height:1.7; margin-bottom:32px; }
+.hero-intro .hero-actions{ margin-bottom:44px; }
+.hero-intro .btn-outline{ border-color:var(--border); color:var(--ink); }
+.hero-intro .hero-metrics{ max-width:none; border-top:1px solid var(--border); padding-top:28px; }
+.hero-intro .hero-metric .val{ color:var(--ink); }
+.hero-intro .hero-metric .val.emerald{ color:#059669; }
+.hero-intro .hero-metric .lbl{ color:var(--ink-muted); }
+.hero h1{ max-width:1000px; }
+@media (max-width:768px){
+  .hero-intro{ padding:44px 0 4px; }
+  .hero-intro .hero-metrics{ grid-template-columns:1fr; gap:16px; }
+}
 .hero .btn-outline:hover{ background:#fff; color:#04110c; }
 @media (max-width:1024px){
   .hero{ min-height:0; padding:96px 24px 80px; }
@@ -1598,29 +1613,34 @@
         <div class="wrap">
             <div class="hero-grid">
                 <div class="reveal">
-                    <span class="eyebrow">Circularity at industrial scale</span>
                     <h1>Turning non-recyclable <span class="highlight">waste</span> into clean industrial energy for large&nbsp;Scale Decarbonization</h1>
-                    <p class="hero-desc">ENVIRO ENABLERS converts non-recyclable plastic waste and surplus agri-residue into reliable, high-calorific alternate fuels — replacing coal and petcoke in cement, power and FMCG, and curbing open burning at the source.</p>
-                    <div class="hero-actions">
-                        <a class="btn btn-primary" href="#contact">Request a spec sheet →</a>
-                        <a class="btn btn-outline" href="#solutions">Explore solutions</a>
-                    </div>
-                    <div class="hero-metrics">
-                        <div class="hero-metric">
-                            <div class="val">15<span style="font-size:0.7rem;font-weight:400">-year</span></div>
-                            <div class="lbl">PAN India Alternate Fuel Agreement</div>
-                        </div>
-                        <div class="hero-metric">
-                            <div class="val emerald count" data-target="117238" data-suffix="+">0</div>
-                            <div class="lbl">Tonnes of biomass fuel supplied</div>
-                        </div>
-                        <div class="hero-metric">
-                            <div class="val emerald count" data-target="57463" data-suffix="+">0</div>
-                            <div class="lbl">Tonnes of plastic waste diverted</div>
-                        </div>
-                    </div>
                 </div>
-                
+            </div>
+        </div>
+    </section>
+
+    <!-- HERO INTRO (pushed below the image) -->
+    <section class="hero-intro">
+        <div class="wrap">
+            <span class="eyebrow">Circularity at industrial scale</span>
+            <p class="intro-desc">ENVIRO ENABLERS converts non-recyclable plastic waste and surplus agri-residue into reliable, high-calorific alternate fuels — replacing coal and petcoke in cement, power and FMCG, and curbing open burning at the source.</p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="#contact">Request a spec sheet →</a>
+                <a class="btn btn-outline" href="#solutions">Explore solutions</a>
+            </div>
+            <div class="hero-metrics">
+                <div class="hero-metric">
+                    <div class="val">15<span style="font-size:0.7rem;font-weight:400">-year</span></div>
+                    <div class="lbl">PAN India Alternate Fuel Agreement</div>
+                </div>
+                <div class="hero-metric">
+                    <div class="val emerald count" data-target="117238" data-suffix="+">0</div>
+                    <div class="lbl">Tonnes of biomass fuel supplied</div>
+                </div>
+                <div class="hero-metric">
+                    <div class="val emerald count" data-target="57463" data-suffix="+">0</div>
+                    <div class="lbl">Tonnes of plastic waste diverted</div>
+                </div>
             </div>
         </div>
     </section>
@@ -2039,7 +2059,7 @@
             function nextSlide() { goTo((current + 1) % slides.length); }
             function startTimer() {
                 clearInterval(timer);
-                timer = setInterval(function(){ if (!paused) nextSlide(); }, 7000);
+                timer = setInterval(function(){ if (!paused) nextSlide(); }, 5000);
             }
             const heroEl = document.querySelector('.hero');
             if (heroEl) {
