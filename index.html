@@ -1654,6 +1654,46 @@
       .future-copy p{ font-size:.95rem; }
     }
     </style>
+
+    <!-- HERO v4 : whole photo behind, copy in front, contained ~70% band -->
+    <style>
+    .hero{
+      width:min(70vw,1180px); margin:26px auto 0; padding:0;
+      aspect-ratio:880 / 550; min-height:0;
+      display:flex; align-items:center;
+      border-radius:22px; overflow:hidden; background:#04090d;
+      box-shadow:0 30px 70px rgba(0,0,0,.26);
+    }
+    .hero .hero-amb{ display:none; }
+    .hero::before{
+      z-index:2;
+      background:
+        linear-gradient(96deg, rgba(3,9,13,.95) 0%, rgba(3,9,13,.88) 30%, rgba(3,9,13,.46) 60%, rgba(3,9,13,.04) 88%),
+        linear-gradient(0deg, rgba(3,9,13,.50) 0%, rgba(3,9,13,0) 52%);
+    }
+    .hero .wrap{ position:static; z-index:auto; width:100%; padding:0 56px; }
+    .hero-grid{ display:block; position:static; gap:0; }
+    .hero-copy{ position:relative; z-index:3; max-width:640px; }
+    .hero-copy .hero-desc{ max-width:520px; }
+    .hero .hero-slider{
+      position:absolute; inset:0; width:100%; height:100%; z-index:1;
+      aspect-ratio:auto; border:0; border-radius:0; box-shadow:none; background:transparent;
+    }
+    .hero .hero-slider .slide img{ object-fit:cover; object-position:center; }
+    .hero .hero-slider .slider-dots{ bottom:24px; right:28px; }
+    @media (max-width:980px){
+      .hero{
+        width:calc(100% - 24px); margin:14px auto 0; aspect-ratio:auto;
+        height:clamp(430px, 76vh, 620px); display:flex; align-items:flex-end; border-radius:18px;
+      }
+      .hero::before{
+        background:linear-gradient(180deg, rgba(3,9,13,.55) 0%, rgba(3,9,13,.30) 32%, rgba(3,9,13,.90) 80%, #04090d 100%);
+      }
+      .hero .wrap{ padding:0; }
+      .hero-copy{ max-width:none; padding:0 20px 26px; }
+      .hero .hero-slider .slider-dots{ bottom:auto; top:16px; right:16px; }
+    }
+    </style>
 </head>
 <body>
 
