@@ -1469,50 +1469,60 @@
         }
     </style>
 <style>
-/* ================= FULL-BLEED HERO (slideshow as page background) ================= */
+/* ================= FULL-BLEED HERO (5-slide slideshow as page background) ================= */
 .hero{
-  padding:130px 32px 110px;
-  min-height:90vh;
+  position:relative;
+  overflow:hidden;
   display:flex;
   align-items:center;
+  min-height:92vh;
+  padding:120px 32px 100px;
   background:#04090d;
 }
+/* dark scrim so white copy never mixes with the photo */
 .hero::before{
   content:"";
   position:absolute; inset:0; z-index:1; pointer-events:none;
   background:
-    linear-gradient(90deg, rgba(2,8,12,.96) 0%, rgba(2,8,12,.90) 34%, rgba(2,8,12,.62) 62%, rgba(2,8,12,.22) 88%, rgba(2,8,12,.12) 100%),
-    linear-gradient(0deg, rgba(0,0,0,.82) 0%, rgba(0,0,0,0) 52%);
+    linear-gradient(90deg, rgba(2,8,12,.95) 0%, rgba(2,8,12,.90) 32%, rgba(2,8,12,.66) 58%, rgba(2,8,12,.28) 84%, rgba(2,8,12,.14) 100%),
+    linear-gradient(0deg, rgba(0,0,0,.80) 0%, rgba(0,0,0,0) 50%);
 }
-.hero .wrap{ position:static; z-index:auto; }
-.hero-grid > div:first-child{ position:relative; z-index:3; }
-.hero-grid{ grid-template-columns:1fr; gap:0; }
-.hero-slider{
+/* slideshow sits edge-to-edge behind everything */
+.hero .hero-slider{
   position:absolute; inset:0; z-index:0;
-  aspect-ratio:auto; border:0; border-radius:0; box-shadow:none; background:#04090d;
+  width:100%; height:100%;
+  aspect-ratio:auto; border:0; border-radius:0; box-shadow:none;
+  background:#04090d;
+  opacity:1; transform:none;
 }
-.hero-slider .slider-track{ position:absolute; inset:0; width:100%; height:100%; }
-.hero-slider .slide img{ width:100%; height:100%; object-fit:cover; }
-.hero-slider .slide-cap{ display:none; }
-.hero-slider .slider-dots{ bottom:26px; right:32px; z-index:4; }
+.hero .hero-slider .slider-track{ position:absolute; inset:0; width:100%; height:100%; }
+.hero .hero-slider .slide{ position:absolute; inset:0; opacity:0; transition:opacity 0.9s ease; }
+.hero .hero-slider .slide.active{ opacity:1; }
+.hero .hero-slider .slide img{ width:100%; height:100%; object-fit:cover; display:block; }
+.hero .hero-slider .slide-cap{ display:none; }
+.hero .hero-slider .slider-dots{ bottom:26px; right:34px; z-index:4; }
+/* copy always on top */
+.hero .wrap{ position:relative; z-index:3; width:100%; }
+.hero-grid{ display:grid; grid-template-columns:1fr; gap:0; align-items:center; }
 .hero h1{ color:#fff; }
 .hero h1 .highlight{ color:#34d399; }
 .hero .eyebrow{ color:#34d399; }
-.hero .hero-desc{ color:rgba(241,245,249,.88); max-width:640px; }
-.hero-metrics{ max-width:820px; border-top-color:rgba(255,255,255,.18); }
+.hero .hero-desc{ color:rgba(241,245,249,.9); max-width:640px; }
+.hero-metrics{ max-width:820px; border-top:1px solid rgba(255,255,255,.2); }
 .hero-metric .val{ color:#34d399; }
-.hero-metric .lbl{ color:rgba(226,232,240,.82); }
+.hero-metric .lbl{ color:rgba(226,232,240,.84); }
 .hero .btn-outline{ border-color:rgba(255,255,255,.6); color:#fff; }
 .hero .btn-outline:hover{ background:#fff; color:#04110c; }
 @media (max-width:1024px){
-  .hero{ min-height:0; padding:110px 24px 90px; }
+  .hero{ min-height:0; padding:96px 24px 80px; }
   .hero::before{
-    background:linear-gradient(180deg, rgba(2,8,12,.86) 0%, rgba(2,8,12,.93) 55%, rgba(2,8,12,.98) 100%);
+    background:linear-gradient(180deg, rgba(2,8,12,.86) 0%, rgba(2,8,12,.93) 50%, rgba(2,8,12,.98) 100%);
   }
 }
 @media (max-width:640px){
-  .hero{ padding:96px 20px 72px; }
-  .hero-slider .slider-dots{ bottom:14px; right:16px; }
+  .hero{ padding:84px 20px 64px; }
+  .hero h1{ font-size:2rem; }
+  .hero .hero-slider .slider-dots{ bottom:14px; right:16px; }
 }
 
 </style>
@@ -1560,6 +1570,31 @@
 
     <!-- HERO -->
     <section class="hero">
+            <div class="hero-slider reveal">
+                    <div class="slider-track">
+                        <div class="slide active">
+                            <img src="g-plastic-bale.jpg" alt="Densified plastic alternate fuel bale">
+                            <div class="slide-cap"><span>Densified plastic AFR</span><small>Cleaned, shredded &amp; baled to spec</small></div>
+                        </div>
+                        <div class="slide">
+                            <img src="g-plastic-truck.jpg" alt="Plastic AFR bales dispatched" loading="lazy">
+                            <div class="slide-cap"><span>Dispatch at scale</span><small>Delivered to cement plants</small></div>
+                        </div>
+                        <div class="slide">
+                            <img src="g-agri-bales.jpg" alt="Baled agri-residue feedstock" loading="lazy">
+                            <div class="slide-cap"><span>Agri-residue feedstock</span><small>Sourced &amp; baled at source</small></div>
+                        </div>
+                        <div class="slide">
+                            <img src="g-agri-briquettes.jpg" alt="Agri-residue biomass briquettes" loading="lazy">
+                            <div class="slide-cap"><span>Biomass briquettes</span><small>For power plants &amp; FMCG boilers</small></div>
+                        </div>
+                        <div class="slide">
+                            <img src="g-biomass-pellets.jpg" alt="Biomass pellets for industrial fuel" loading="lazy">
+                            <div class="slide-cap"><span>Biomass pellets</span><small>Low-ash, high heat value</small></div>
+                        </div>
+                    </div>
+                    <div class="slider-dots"></div>
+                </div>
         <div class="wrap">
             <div class="hero-grid">
                 <div class="reveal">
@@ -1585,31 +1620,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="hero-slider reveal">
-                    <div class="slider-track">
-                        <div class="slide active">
-                            <img src="g-plastic-bale.jpg" alt="Densified plastic alternate fuel bale">
-                            <div class="slide-cap"><span>Densified plastic AFR</span><small>Cleaned, shredded &amp; baled to spec</small></div>
-                        </div>
-                        <div class="slide">
-                            <img src="g-plastic-truck.jpg" alt="Plastic AFR bales dispatched" loading="lazy">
-                            <div class="slide-cap"><span>Dispatch at scale</span><small>Delivered to cement plants</small></div>
-                        </div>
-                        <div class="slide">
-                            <img src="g-agri-bales.jpg" alt="Baled agri-residue feedstock" loading="lazy">
-                            <div class="slide-cap"><span>Agri-residue feedstock</span><small>Sourced &amp; baled at source</small></div>
-                        </div>
-                        <div class="slide">
-                            <img src="g-agri-briquettes.jpg" alt="Agri-residue biomass briquettes" loading="lazy">
-                            <div class="slide-cap"><span>Biomass briquettes</span><small>For power plants &amp; FMCG boilers</small></div>
-                        </div>
-                        <div class="slide">
-                            <img src="g-biomass-pellets.jpg" alt="Biomass pellets for industrial fuel" loading="lazy">
-                            <div class="slide-cap"><span>Biomass pellets</span><small>Low-ash, high heat value</small></div>
-                        </div>
-                    </div>
-                    <div class="slider-dots"></div>
-                </div>
+                
             </div>
         </div>
     </section>
