@@ -1520,7 +1520,7 @@ footer {
 @keyframes heroPan { from { transform: scale(1.07); } to { transform: scale(1); } }
 
 /* readable scrim: dark on the left where the headline sits */
-.hero .hero-amb {
+.hero:not(.page-hero) .hero-amb {
   z-index: 2;
   background:
     linear-gradient(90deg, rgba(8, 8, 8, 0.94) 0%, rgba(8, 8, 8, 0.82) 34%, rgba(8, 8, 8, 0.45) 66%, rgba(8, 8, 8, 0.22) 100%),
@@ -1584,7 +1584,7 @@ footer {
 a:not(.btn):hover { color: var(--emerald-deep); }
 
 @media (max-width: 900px) {
-  .hero .hero-amb {
+  .hero:not(.page-hero) .hero-amb {
     background:
       linear-gradient(180deg, rgba(8, 8, 8, 0.55) 0%, rgba(8, 8, 8, 0.55) 35%, rgba(8, 8, 8, 0.92) 100%),
       linear-gradient(90deg, rgba(8, 8, 8, 0.5), rgba(8, 8, 8, 0.2));
