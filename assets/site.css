@@ -293,7 +293,6 @@ header.scrolled .btn-primary:hover { background: transparent; color: var(--ink);
 }
 
 .mobnav {
-  display: flex;
   display: none;
   flex-direction: column;
   background: var(--paper);
@@ -311,8 +310,8 @@ header.scrolled .btn-primary:hover { background: transparent; color: var(--ink);
   padding: 16px 0;
   border-bottom: 1px solid var(--line);
 }
-.mobnav:not(.closed) { display: flex; }
-.mobnav.closed { display: none; }
+.mobnav.open { display: flex; }
+
 
 /* ---------- marquee ---------- */
 .marquee {
