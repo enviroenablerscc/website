@@ -1738,6 +1738,35 @@
       .hero .hero-slider .slider-dots{ top:auto; bottom:12px; right:14px; }
     }
     </style>
+
+    <style>
+    /* FAQ — editorial accordion, inspired by unitedcarriers.com/about */
+    .faq-section{ background:#fff; padding:88px 0; }
+    .faq-grid{ display:grid; grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr); gap:64px; align-items:start; }
+    .faq-head h2{ margin:14px 0 16px; }
+    .faq-head p{ color:var(--ink-muted); max-width:34ch; }
+    .faq-head .faq-cta{ display:inline-flex; align-items:center; gap:8px; margin-top:22px; font-weight:600;
+        font-size:.9rem; letter-spacing:.02em; color:var(--emerald-deep); text-decoration:none; border-bottom:1px solid currentColor; padding-bottom:3px; }
+    .faq-list{ border-top:1px solid var(--border); }
+    .faq-item{ border-bottom:1px solid var(--border); }
+    .faq-item summary{ list-style:none; cursor:pointer; display:flex; align-items:baseline; gap:18px;
+        padding:26px 0; font-family:'DM Sans',system-ui,sans-serif; font-weight:700; font-size:clamp(1.02rem,1.5vw,1.22rem);
+        letter-spacing:-.02em; color:var(--ink); }
+    .faq-item summary::-webkit-details-marker{ display:none; }
+    .faq-item summary .fi{ font-family:'JetBrains Mono',monospace; font-size:.72rem; font-weight:500; letter-spacing:.08em;
+        color:var(--emerald-deep); flex:0 0 26px; transform:translateY(-2px); }
+    .faq-item summary .fx{ margin-left:auto; font-size:1.35rem; line-height:1; font-weight:400; color:var(--ink-faint); transition:transform .25s ease; }
+    .faq-item[open] summary .fx{ transform:rotate(45deg); color:var(--emerald-deep); }
+    .faq-item[open] summary{ color:var(--emerald-deep); }
+    .faq-a{ padding:0 0 26px 44px; max-width:58ch; color:var(--ink-muted); font-size:.95rem; line-height:1.65; }
+    .faq-a strong{ color:var(--ink); }
+    @media (max-width:860px){
+      .faq-section{ padding:64px 0; }
+      .faq-grid{ grid-template-columns:1fr; gap:32px; }
+      .faq-item summary{ padding:22px 0; gap:14px; }
+      .faq-a{ padding-left:40px; }
+    }
+    </style>
 </head>
 <body>
 
@@ -2097,6 +2126,46 @@
                     <div class="role">Advisor</div>
                     <p>Ex-India Head HSBC; Ex-President, FICCI</p>
                     <a class="linkedin-link" href="https://www.linkedin.com/in/naina-lal-kidwai/" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.64 4.75 6.07V21H17v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21H9z"/></svg> LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq-section">
+        <div class="wrap">
+            <div class="faq-grid">
+                <div class="faq-head reveal">
+                    <span class="eyebrow">Before you commit</span>
+                    <h2>The questions buyers actually ask.</h2>
+                    <p>Specs, volumes, compliance paper and what a trial looks like — answered plainly.</p>
+                    <a class="faq-cta" href="#contact">Talk to our fuel desk →</a>
+                </div>
+                <div class="faq-list reveal">
+                    <details class="faq-item">
+                        <summary><span class="fi">01</span><span>What fuel specification can you guarantee?</span><span class="fx">+</span></summary>
+                        <div class="faq-a"><strong>3,200–4,200 kcal/kg GCV, chlorine under 0.8%, moisture under 12%</strong> — sized and densified to your kiln or boiler feed. Every batch ships against the agreed spec, not a typical value.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary><span class="fi">02</span><span>What volumes can you commit to?</span><span class="fx">+</span></summary>
+                        <div class="faq-a">Long-tenor MOUs typically start at <strong>500–2,000 tonnes a month per site</strong>, with contracted tonnage ramped over an agreed trial window rather than promised on day one.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary><span class="fi">03</span><span>Can we trial before signing anything long-term?</span><span class="fx">+</span></summary>
+                        <div class="faq-a">Yes. A sample lot for lab validation, then a <strong>30–60 day co-processing trial</strong> with our team on site, then ramp-up to contracted tonnage once your kiln accepts the feed.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary><span class="fi">04</span><span>How do you prove compliance and traceability?</span><span class="fx">+</span></summary>
+                        <div class="faq-a">Batch-level lab reports (GCV, moisture, chlorine, ash), source consents and recycler documentation, plus <strong>track-trace-audit CO₂ abatement reporting</strong> your ESG team can attach to a filing.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary><span class="fi">05</span><span>Do you support us through burner changeover?</span><span class="fx">+</span></summary>
+                        <div class="faq-a">We supply the SOPs, operator briefing and on-site changeover support, and stay through the first stabilised production runs.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary><span class="fi">06</span><span>Where do you currently deliver?</span><span class="fx">+</span></summary>
+                        <div class="faq-a">Tamil Nadu and Kerala industrial corridors first — <strong>Coimbatore, Palakkad, Chennai, Tiruppur</strong> — with regional sites for cement, power and FMCG off-takers.</div>
+                    </details>
                 </div>
             </div>
         </div>
