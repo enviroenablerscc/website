@@ -77,6 +77,7 @@ p:last-child { margin-bottom: 0; }
 /* two-tone display headings */
 h1 .dim, h2 .dim, .dim { color: var(--t3); }
 .dark h1 .dim, .dark h2 .dim, .dark .dim { color: var(--w3); }
+.hero .dim, .hero h1 .dim, .hero h2 .dim { color: rgba(255, 255, 255, 0.55); }
 
 /* ---------- layout ---------- */
 .wrap {
