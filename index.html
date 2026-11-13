@@ -300,7 +300,7 @@
             font-weight: 500;
             color: var(--ink-muted);
             transition: color 0.2s ease;
-            padding: 6px 0;
+            padding: 13px 0;
         }
         .navlinks a.nl:hover {
             color: var(--ink);
@@ -703,7 +703,9 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            margin-top: 24px;
+            min-height: 44px;
+            padding: 8px 0;
+            margin-top: 16px;
             font-size: 0.88rem;
             font-weight: 600;
             color: var(--emerald-deep);
@@ -740,7 +742,7 @@
         .process-card:hover .step-num {
             color: var(--emerald);
         }
-        .process-card h4 {
+        .process-card h3 {
             font-size: 0.95rem;
             font-weight: 600;
             margin-bottom: 8px;
@@ -1133,7 +1135,7 @@
             filter: grayscale(0%);
             transform: scale(1.05);
         }
-        .person-card h4 {
+        .person-card h3 {
             font-size: 0.98rem;
             margin-bottom: 4px;
         }
@@ -1152,8 +1154,10 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            margin-top: 14px;
-            font-size: 0.76rem;
+            margin-top: 10px;
+            padding: 9px 0;
+            min-height: 36px;
+            font-size: 0.8rem;
             font-weight: 600;
             color: var(--ink-faint);
             transition: color 0.2s ease;
@@ -1310,7 +1314,22 @@
             border-color: var(--emerald);
             transform: translateY(-2px);
         }
-        footer h5 {
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            z-index: 999;
+            background: var(--emerald-deep);
+            color: #fff;
+            padding: 12px 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 0 0 4px 0;
+        }
+        .skip-link:focus {
+            left: 0;
+        }
+        footer h3 {
             font-size: 0.72rem;
             letter-spacing: 0.12em;
             text-transform: uppercase;
@@ -1322,9 +1341,11 @@
             list-style: none;
         }
         footer ul li {
-            margin-bottom: 10px;
+            margin-bottom: 0;
         }
         footer ul a {
+            display: inline-block;
+            padding: 8px 0;
             font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.5);
             transition: color 0.2s ease;
@@ -1721,6 +1742,8 @@
 </head>
 <body>
 
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <!-- TOP BAR -->
     <div class="topbar">
         Serving <span>Cement</span> · <span>Power &amp; Utilities</span> · <span>FMCG</span> · <span>CBG</span> across India
@@ -1761,7 +1784,7 @@
     <a id="top"></a>
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" id="main">
         <div class="hero-amb" aria-hidden="true"></div>
             
         <div class="wrap">
@@ -1899,27 +1922,27 @@
             <div class="grid-5 reveal">
                 <div class="process-card">
                     <div class="step-num">1</div>
-                    <h4>Collection &amp; segregation</h4>
+                    <h3>Collection &amp; segregation</h3>
                     <p>Plastics and crop residue are sourced and sorted at the point of generation.</p>
                 </div>
                 <div class="process-card">
                     <div class="step-num">2</div>
-                    <h4>Cleaning &amp; shredding</h4>
+                    <h3>Cleaning &amp; shredding</h3>
                     <p>Feedstock is cleaned, size-reduced and densified into a uniform fuel.</p>
                 </div>
                 <div class="process-card">
                     <div class="step-num">3</div>
-                    <h4>Fuel spec &amp; QA</h4>
+                    <h3>Fuel spec &amp; QA</h3>
                     <p>Each batch is lab-tested for calorific value, moisture and chlorine to your spec.</p>
                 </div>
                 <div class="process-card">
                     <div class="step-num">4</div>
-                    <h4>Delivery &amp; utilization</h4>
+                    <h3>Delivery &amp; utilization</h3>
                     <p>Fuel is delivered to the kiln or boiler with changeover support and SOPs.</p>
                 </div>
                 <div class="process-card">
                     <div class="step-num">5</div>
-                    <h4>Tracking &amp; audit</h4>
+                    <h3>Tracking &amp; audit</h3>
                     <p>Every tonne is tracked end-to-end with audit-ready CO₂-abatement reporting.</p>
                 </div>
             </div>
@@ -2026,14 +2049,14 @@
             <div class="team-2">
                 <div class="person-card reveal">
                     <a class="avatar-link" href="https://www.linkedin.com/in/mahesh-babu-9369a9253/" target="_blank" rel="noopener"><img class="avatar-img" src="mahesh-babu.jpg" alt="Mahesh Babu" width="360" height="360" loading="lazy"></a>
-                    <h4>Mahesh Babu</h4>
+                    <h3>Mahesh Babu</h3>
                     <div class="role">Managing Director</div>
                     <p>Industry leader; pioneer in sustainable waste management</p>
                     <a class="linkedin-link" href="https://www.linkedin.com/in/mahesh-babu-9369a9253/" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.64 4.75 6.07V21H17v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21H9z"/></svg> LinkedIn</a>
                 </div>
                 <div class="person-card reveal">
                     <a class="avatar-link" href="https://www.linkedin.com/in/prodipto-ghosh-65056814/" target="_blank" rel="noopener"><img class="avatar-img" src="prodipto-ghosh.jpg" alt="Dr. Prodipto Ghosh" width="360" height="360" loading="lazy"></a>
-                    <h4>Dr. Prodipto Ghosh</h4>
+                    <h3>Dr. Prodipto Ghosh</h3>
                     <div class="role">Director</div>
                     <p>Former Secretary, MoEFCC; Distinguished Fellow, TERI</p>
                     <a class="linkedin-link" href="https://www.linkedin.com/in/prodipto-ghosh-65056814/" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.64 4.75 6.07V21H17v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21H9z"/></svg> LinkedIn</a>
@@ -2043,35 +2066,35 @@
             <div class="team-flex">
                 <div class="person-card reveal">
                     <a class="avatar-link" href="https://www.linkedin.com/in/vipul-roongta-44a42a2a/" target="_blank" rel="noopener"><img class="avatar-img" src="vipul-roongta.jpg" alt="Vipul Roongta" width="360" height="360" loading="lazy"></a>
-                    <h4>Vipul Roongta</h4>
+                    <h3>Vipul Roongta</h3>
                     <div class="role">Advisor</div>
                     <p>MD, HDFC Capital; leader in affordable housing finance</p>
                     <a class="linkedin-link" href="https://www.linkedin.com/in/vipul-roongta-44a42a2a/" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.64 4.75 6.07V21H17v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21H9z"/></svg> LinkedIn</a>
                 </div>
                 <div class="person-card reveal">
                     <a class="avatar-link" href="https://www.linkedin.com/in/rajiv-banga-bb74879/" target="_blank" rel="noopener"><img class="avatar-img" src="rajiv-banga.jpg" alt="Rajiv Banga" width="360" height="360" loading="lazy"></a>
-                    <h4>Rajiv Banga</h4>
+                    <h3>Rajiv Banga</h3>
                     <div class="role">Advisor</div>
                     <p>Ex-MD Rapid Metro &amp; Mangalore SEZ; Ex-VP Hindustan Unilever</p>
                     <a class="linkedin-link" href="https://www.linkedin.com/in/rajiv-banga-bb74879/" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.64 4.75 6.07V21H17v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21H9z"/></svg> LinkedIn</a>
                 </div>
                 <div class="person-card reveal">
                     <a class="avatar-link" href="https://www.linkedin.com/in/v-rajagopalan-b3998856/" target="_blank" rel="noopener"><img class="avatar-img" src="v-rajagopalan.jpg" alt="Dr. V Rajagopalan" width="360" height="360" loading="lazy"></a>
-                    <h4>Dr. V Rajagopalan</h4>
+                    <h3>Dr. V Rajagopalan</h3>
                     <div class="role">Advisor</div>
                     <p>Former Secretary, Ministry of Environment, Forest &amp; Climate Change</p>
                     <a class="linkedin-link" href="https://www.linkedin.com/in/v-rajagopalan-b3998856/" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.64 4.75 6.07V21H17v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21H9z"/></svg> LinkedIn</a>
                 </div>
                 <div class="person-card reveal">
                     <a class="avatar-link" href="https://www.linkedin.com/in/dinesh-tyagi-07477843/" target="_blank" rel="noopener"><img class="avatar-img" src="dinesh-tyagi.jpg" alt="Dr. Dinesh Tyagi" width="360" height="360" loading="lazy"></a>
-                    <h4>Dr. Dinesh Tyagi</h4>
+                    <h3>Dr. Dinesh Tyagi</h3>
                     <div class="role">Advisor</div>
                     <p>Set up 400,000+ Common Service Centres; senior government leader</p>
                     <a class="linkedin-link" href="https://www.linkedin.com/in/dinesh-tyagi-07477843/" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.64 4.75 6.07V21H17v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21H9z"/></svg> LinkedIn</a>
                 </div>
                 <div class="person-card reveal">
                     <a class="avatar-link" href="https://www.linkedin.com/in/naina-lal-kidwai/" target="_blank" rel="noopener"><img class="avatar-img" src="naina-lal-kidwai.jpg" alt="Naina Lal Kidwai" width="360" height="360" loading="lazy"></a>
-                    <h4>Naina Lal Kidwai</h4>
+                    <h3>Naina Lal Kidwai</h3>
                     <div class="role">Advisor</div>
                     <p>Ex-India Head HSBC; Ex-President, FICCI</p>
                     <a class="linkedin-link" href="https://www.linkedin.com/in/naina-lal-kidwai/" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.64 4.75 6.07V21H17v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21H9z"/></svg> LinkedIn</a>
@@ -2128,7 +2151,7 @@
                 </div>
             </div>
             <div>
-                <h5>Browse</h5>
+                <h3>Browse</h3>
                 <ul>
                     <li><a href="#solutions">Solutions</a></li>
                     <li><a href="#products">Products</a></li>
@@ -2138,7 +2161,7 @@
                 </ul>
             </div>
             <div>
-                <h5>Get in touch</h5>
+                <h3>Get in touch</h3>
                 <ul>
                     <li><a href="mailto:sriviisnu@climatecircle.com">sriviisnu@climatecircle.com</a></li>
                     <li><a href="tel:+918810241915">+91 8810241915</a></li>
