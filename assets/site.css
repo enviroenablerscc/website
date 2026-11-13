@@ -1623,7 +1623,7 @@ body.home header.scrolled .brand {
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 4px;
-  padding: 16px 18px;
+  padding: 14px 16px;
   display: grid;
   grid-template-columns: 74px minmax(0, 1fr);
   grid-template-areas: "av name" "av role" "av bio" "av link";
@@ -1642,8 +1642,8 @@ body.home header.scrolled .brand {
   display: block;
 }
 .person-card h3 { grid-area: name; font-size: 1.02rem; line-height: 1.2; margin: 0; }
-.person-card .role { grid-area: role; margin-top: 3px; font-size: 11px; letter-spacing: 0.12em; color: var(--emerald); }
-.person-card > p { grid-area: bio; margin: 7px 0 0; font-size: 14px; line-height: 1.5; color: var(--t2); }
+.person-card .role { grid-area: role; margin: 3px 0 0; padding: 0 !important; font-family: var(--ff-m); font-size: 11px; line-height: 1.4; letter-spacing: 0.12em; text-transform: uppercase; color: var(--emerald); }
+.person-card > p { grid-area: bio; margin: 6px 0 0; padding: 0; font-size: 14px; max-width: 46ch; line-height: 1.5; color: var(--t2); }
 .person-card .linkedin-link {
   grid-area: link;
   justify-self: start;
