@@ -69,10 +69,10 @@
             --ink-light: #333333;
             --ink-muted: #666666;
             --ink-faint: #999999;
-            --emerald: #059669;
+            --emerald: #047857;
             --emerald-light: #10b981;
             --emerald-pale: #d1fae5;
-            --emerald-deep: #047857;
+            --emerald-deep: #065f46;
             --rust: #c2410c;
             --rust-light: #ea580c;
             --rust-pale: #ffedd5;
@@ -177,9 +177,9 @@
 
         .eyebrow {
             display: inline-block;
-            font-size: 0.7rem;
+            font-size: 0.76rem;
             font-weight: 700;
-            letter-spacing: 0.2em;
+            letter-spacing: 0.18em;
             text-transform: uppercase;
             color: var(--emerald);
             margin-bottom: 20px;
@@ -1527,7 +1527,7 @@
 .hero-metric .lbl{ color:rgba(226,232,240,.84); }
 .hero .btn-outline{ border-color:rgba(255,255,255,.6); color:#fff; }
 /* Hero intro band (copy pushed below the image) */
-.hero-intro{ background:var(--white); padding:64px 0 8px; }
+.hero-intro{ background:var(--white); padding:64px 0 72px; }
 .hero-intro .eyebrow{ color:#059669; }
 .hero-intro .intro-desc{ font-size:1.1rem; color:var(--ink-muted); max-width:760px; line-height:1.7; margin-bottom:32px; }
 .hero-intro .hero-actions{ margin-bottom:44px; }
@@ -1538,7 +1538,7 @@
 .hero-intro .hero-metric .lbl{ color:var(--ink-muted); }
 .hero h1{ max-width:880px; }
 @media (max-width:768px){
-  .hero-intro{ padding:44px 0 4px; }
+  .hero-intro{ padding:44px 0 48px; }
   .hero-intro .hero-metrics{ grid-template-columns:1fr; gap:16px; }
 }
 .hero .btn-outline:hover{ background:#fff; color:#04110c; }
@@ -1714,6 +1714,10 @@
       .hero .hero-slider .slider-dots{ top:auto; bottom:12px; right:14px; }
     }
     </style>
+    <style>
+    /* portraits: never upscale the 360px source */
+    .avatar-img{ max-width:360px; }
+    </style>
 </head>
 <body>
 
@@ -1763,7 +1767,7 @@
         <div class="wrap">
             <div class="hero-grid">
                 <div class="hero-copy reveal">
-                    <h1>Turning non-recyclable <span class="highlight">waste</span> into clean industrial energy for large&nbsp;Scale Decarbonization</h1>
+                    <h1>Turning non-recyclable <span class="highlight">waste</span> into clean industrial energy</h1>
                 </div>
                 <div class="hero-slider reveal">
                                     <div class="slider-track">
@@ -1823,7 +1827,7 @@
     <!-- NEXT GENERATION -->
     <section class="future">
         <div class="future-media">
-            <img class="future-img" src="future-fields.jpg" alt="Green fields, trees and a village road — the future we are handing over" loading="lazy">
+            <img class="future-img" src="future-fields.jpg" width="1600" height="900" alt="Green fields, trees and a village road — the future we are handing over" loading="lazy">
             <div class="future-scrim" aria-hidden="true"></div>
             <div class="wrap future-wrap">
                 <div class="future-copy">
@@ -2021,14 +2025,14 @@
             <div class="section-subhead">Board of Directors</div>
             <div class="team-2">
                 <div class="person-card reveal">
-                    <a class="avatar-link" href="https://www.linkedin.com/in/mahesh-babu-9369a9253/" target="_blank" rel="noopener"><img class="avatar-img" src="mahesh-babu.jpg" alt="Mahesh Babu"></a>
+                    <a class="avatar-link" href="https://www.linkedin.com/in/mahesh-babu-9369a9253/" target="_blank" rel="noopener"><img class="avatar-img" src="mahesh-babu.jpg" alt="Mahesh Babu" width="360" height="360" loading="lazy"></a>
                     <h4>Mahesh Babu</h4>
                     <div class="role">Managing Director</div>
                     <p>Industry leader; pioneer in sustainable waste management</p>
                     <a class="linkedin-link" href="https://www.linkedin.com/in/mahesh-babu-9369a9253/" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.64 4.75 6.07V21H17v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21H9z"/></svg> LinkedIn</a>
                 </div>
                 <div class="person-card reveal">
-                    <a class="avatar-link" href="https://www.linkedin.com/in/prodipto-ghosh-65056814/" target="_blank" rel="noopener"><img class="avatar-img" src="prodipto-ghosh.jpg" alt="Dr. Prodipto Ghosh"></a>
+                    <a class="avatar-link" href="https://www.linkedin.com/in/prodipto-ghosh-65056814/" target="_blank" rel="noopener"><img class="avatar-img" src="prodipto-ghosh.jpg" alt="Dr. Prodipto Ghosh" width="360" height="360" loading="lazy"></a>
                     <h4>Dr. Prodipto Ghosh</h4>
                     <div class="role">Director</div>
                     <p>Former Secretary, MoEFCC; Distinguished Fellow, TERI</p>
@@ -2038,35 +2042,35 @@
             <div class="section-subhead">Advisory Board</div>
             <div class="team-flex">
                 <div class="person-card reveal">
-                    <a class="avatar-link" href="https://www.linkedin.com/in/vipul-roongta-44a42a2a/" target="_blank" rel="noopener"><img class="avatar-img" src="vipul-roongta.jpg" alt="Vipul Roongta"></a>
+                    <a class="avatar-link" href="https://www.linkedin.com/in/vipul-roongta-44a42a2a/" target="_blank" rel="noopener"><img class="avatar-img" src="vipul-roongta.jpg" alt="Vipul Roongta" width="360" height="360" loading="lazy"></a>
                     <h4>Vipul Roongta</h4>
                     <div class="role">Advisor</div>
                     <p>MD, HDFC Capital; leader in affordable housing finance</p>
                     <a class="linkedin-link" href="https://www.linkedin.com/in/vipul-roongta-44a42a2a/" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.64 4.75 6.07V21H17v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21H9z"/></svg> LinkedIn</a>
                 </div>
                 <div class="person-card reveal">
-                    <a class="avatar-link" href="https://www.linkedin.com/in/rajiv-banga-bb74879/" target="_blank" rel="noopener"><img class="avatar-img" src="rajiv-banga.jpg" alt="Rajiv Banga"></a>
+                    <a class="avatar-link" href="https://www.linkedin.com/in/rajiv-banga-bb74879/" target="_blank" rel="noopener"><img class="avatar-img" src="rajiv-banga.jpg" alt="Rajiv Banga" width="360" height="360" loading="lazy"></a>
                     <h4>Rajiv Banga</h4>
                     <div class="role">Advisor</div>
                     <p>Ex-MD Rapid Metro &amp; Mangalore SEZ; Ex-VP Hindustan Unilever</p>
                     <a class="linkedin-link" href="https://www.linkedin.com/in/rajiv-banga-bb74879/" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.64 4.75 6.07V21H17v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21H9z"/></svg> LinkedIn</a>
                 </div>
                 <div class="person-card reveal">
-                    <a class="avatar-link" href="https://www.linkedin.com/in/v-rajagopalan-b3998856/" target="_blank" rel="noopener"><img class="avatar-img" src="v-rajagopalan.jpg" alt="Dr. V Rajagopalan"></a>
+                    <a class="avatar-link" href="https://www.linkedin.com/in/v-rajagopalan-b3998856/" target="_blank" rel="noopener"><img class="avatar-img" src="v-rajagopalan.jpg" alt="Dr. V Rajagopalan" width="360" height="360" loading="lazy"></a>
                     <h4>Dr. V Rajagopalan</h4>
                     <div class="role">Advisor</div>
                     <p>Former Secretary, Ministry of Environment, Forest &amp; Climate Change</p>
                     <a class="linkedin-link" href="https://www.linkedin.com/in/v-rajagopalan-b3998856/" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.64 4.75 6.07V21H17v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21H9z"/></svg> LinkedIn</a>
                 </div>
                 <div class="person-card reveal">
-                    <a class="avatar-link" href="https://www.linkedin.com/in/dinesh-tyagi-07477843/" target="_blank" rel="noopener"><img class="avatar-img" src="dinesh-tyagi.jpg" alt="Dr. Dinesh Tyagi"></a>
+                    <a class="avatar-link" href="https://www.linkedin.com/in/dinesh-tyagi-07477843/" target="_blank" rel="noopener"><img class="avatar-img" src="dinesh-tyagi.jpg" alt="Dr. Dinesh Tyagi" width="360" height="360" loading="lazy"></a>
                     <h4>Dr. Dinesh Tyagi</h4>
                     <div class="role">Advisor</div>
                     <p>Set up 400,000+ Common Service Centres; senior government leader</p>
                     <a class="linkedin-link" href="https://www.linkedin.com/in/dinesh-tyagi-07477843/" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.64 4.75 6.07V21H17v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21H9z"/></svg> LinkedIn</a>
                 </div>
                 <div class="person-card reveal">
-                    <a class="avatar-link" href="https://www.linkedin.com/in/naina-lal-kidwai/" target="_blank" rel="noopener"><img class="avatar-img" src="naina-lal-kidwai.jpg" alt="Naina Lal Kidwai"></a>
+                    <a class="avatar-link" href="https://www.linkedin.com/in/naina-lal-kidwai/" target="_blank" rel="noopener"><img class="avatar-img" src="naina-lal-kidwai.jpg" alt="Naina Lal Kidwai" width="360" height="360" loading="lazy"></a>
                     <h4>Naina Lal Kidwai</h4>
                     <div class="role">Advisor</div>
                     <p>Ex-India Head HSBC; Ex-President, FICCI</p>
