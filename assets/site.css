@@ -476,7 +476,7 @@ header.scrolled .btn-primary:hover { background: transparent; color: var(--ink);
   align-items: center;
 }
 .future h2 { color: var(--w1); max-width: 15ch; }
-.future-copy p { color: var(--w2); font-size: 15px; max-width: 42ch; }
+.future-copy p { color: rgba(255,255,255,0.8); font-size: clamp(17px, 1.4vw, 20px); line-height: 1.7; max-width: 48ch; }
 .future-media { position: relative; overflow: hidden; }
 .future-img { width: 100%; height: clamp(260px, 34vw, 420px); object-fit: cover; }
 .future-scrim { display: none; }
@@ -1592,4 +1592,22 @@ a:not(.btn):hover { color: var(--emerald-deep); }
   .hero h1 { max-width: 22ch; }
   .hero-sub { font-size: 0.95rem; }
   .hero .slider-dots { bottom: 18px; }
+}
+
+/* ---------- home: full-colour logo (other pages keep mono) ---------- */
+body.home header .brand {
+  background: #ffffff;
+  padding: 7px 13px;
+  border-radius: 10px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.22);
+}
+body.home .brand-logo,
+body.home header.scrolled .brand-logo { filter: none; height: 32px; }
+body.home header.scrolled .brand {
+  box-shadow: none;
+  background: #ffffff;
+}
+@media (max-width: 640px) {
+  body.home header .brand { padding: 5px 10px; border-radius: 8px; }
+  body.home .brand-logo { height: 26px; }
 }
