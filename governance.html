@@ -36,7 +36,7 @@
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
             </button>
         </nav>
-        <div id="mobnav" class="mobnav closed">
+        <div id="mobnav" class="mobnav">
             <a href="index.html#solutions" onclick="closeMenu()">Solutions</a>
             <a href="index.html#products" onclick="closeMenu()">Products</a>
             <a href="index.html#impact" onclick="closeMenu()">Impact</a>
@@ -212,11 +212,11 @@
     <script>
         function toggleMenu() {
             const m = document.getElementById('mobnav'), b = document.getElementById('menuBtn');
-            const open = !m.classList.toggle('closed');
+            const open = m.classList.toggle('open');
             b.setAttribute('aria-expanded', String(open));
         }
         function closeMenu() {
-            document.getElementById('mobnav').classList.add('closed');
+            document.getElementById('mobnav').classList.remove('open');
             document.getElementById('menuBtn').setAttribute('aria-expanded', 'false');
         }
         const header = document.getElementById('siteHeader');
