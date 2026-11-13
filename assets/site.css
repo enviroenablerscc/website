@@ -1505,3 +1505,91 @@ footer {
 /* final override: second line of dark-hero headlines always reads light */
 .hero .dim, .hero h1 .dim, .hero h2 .dim,
 .hero.page-hero .dim, .hero.page-hero h1 .dim { color: rgba(255, 255, 255, 0.55) !important; }
+
+/* ============================================================
+   HERO SLIDESHOW — full-bleed fix + colour pass (2026-11-13)
+   ============================================================ */
+
+/* slider now a direct child of .hero: fill the whole hero band */
+.hero > .hero-slider { position: absolute; inset: 0; z-index: 1; }
+.hero > .hero-slider .slider-track { position: absolute; inset: 0; }
+.hero > .hero-slider .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.2s var(--ease); will-change: opacity; }
+.hero > .hero-slider .slide.active { opacity: 1; }
+.hero > .hero-slider .slide img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.hero > .hero-slider .slide.active img { animation: heroPan 18s ease-out both; }
+@keyframes heroPan { from { transform: scale(1.07); } to { transform: scale(1); } }
+
+/* readable scrim: dark on the left where the headline sits */
+.hero .hero-amb {
+  z-index: 2;
+  background:
+    linear-gradient(90deg, rgba(8, 8, 8, 0.94) 0%, rgba(8, 8, 8, 0.82) 34%, rgba(8, 8, 8, 0.45) 66%, rgba(8, 8, 8, 0.22) 100%),
+    linear-gradient(180deg, rgba(8, 8, 8, 0.72) 0%, rgba(8, 8, 8, 0.22) 42%, rgba(8, 8, 8, 0.88) 100%);
+}
+.hero .wrap { z-index: 3; }
+.hero h1 { max-width: 19ch; text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35); }
+.hero-sub {
+  margin: 22px 0 0;
+  max-width: 54ch;
+  font-size: clamp(0.95rem, 1.2vw, 1.08rem);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* slide dots */
+.hero .slider-dots {
+  position: absolute;
+  left: var(--gut);
+  right: var(--gut);
+  bottom: 26px;
+  z-index: 4;
+  display: flex;
+  gap: 8px;
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+.hero .slider-dots .dot {
+  width: 40px;
+  height: 3px;
+  padding: 0;
+  border: 0;
+  background: rgba(255, 255, 255, 0.32);
+  cursor: pointer;
+  transition: background 0.3s var(--ease), width 0.3s var(--ease);
+}
+.hero .slider-dots .dot:hover { background: rgba(255, 255, 255, 0.6); }
+.hero .slider-dots .dot.active { background: var(--emerald); width: 64px; }
+
+/* ---------- colour pass: bring the brand greens back ---------- */
+.hero h1 .dim { color: #7fe3c0 !important; }
+
+.eyebrow { color: var(--emerald); }
+.dark .eyebrow, .process-section .eyebrow, .hero .eyebrow { color: #4ecfa3; }
+
+.hero-metric .val, .hero-metric .count { color: var(--emerald-deep); }
+.step-num { color: #4ecfa3; }
+.impact-card .val, .impact-card .count { color: var(--emerald-deep); }
+
+.btn-primary:hover, .hero-actions .btn-primary:hover {
+  background: var(--emerald);
+  border-color: var(--emerald);
+  color: #ffffff;
+}
+.btn-outline:hover { border-color: var(--emerald); color: var(--emerald); background: rgba(4, 120, 87, 0.06); }
+.hero .btn-outline { border-color: rgba(255, 255, 255, 0.4); color: #fff; }
+.hero .btn-outline:hover { background: var(--emerald); border-color: var(--emerald); color: #fff; }
+
+.solution-card:hover h3, .product-card:hover h3 { color: var(--emerald-deep); }
+.product-card .spec { color: var(--emerald); }
+a:not(.btn):hover { color: var(--emerald-deep); }
+
+@media (max-width: 900px) {
+  .hero .hero-amb {
+    background:
+      linear-gradient(180deg, rgba(8, 8, 8, 0.55) 0%, rgba(8, 8, 8, 0.55) 35%, rgba(8, 8, 8, 0.92) 100%),
+      linear-gradient(90deg, rgba(8, 8, 8, 0.5), rgba(8, 8, 8, 0.2));
+  }
+  .hero h1 { max-width: 22ch; }
+  .hero-sub { font-size: 0.95rem; }
+  .hero .slider-dots { bottom: 18px; }
+}
