@@ -25,8 +25,8 @@
             --ink: #111111;
             --ink-light: #333333;
             --ink-muted: #666666;
-            --ink-faint: #999999;
-            --emerald: #059669;
+            --ink-faint: #5b6572;
+            --emerald: #047857;
             --emerald-light: #10b981;
             --emerald-pale: #d1fae5;
             --emerald-deep: #047857;
@@ -63,10 +63,10 @@
         .brand { display: flex; align-items: center; }
         .brand-logo { height: 40px; width: auto; }
         .navlinks { display: flex; align-items: center; gap: 28px; }
-        .navlinks a.nl { color: var(--ink-light); font-size: 14.5px; font-weight: 600; letter-spacing: 0.2px; transition: color .2s; }
+        .navlinks a.nl { color: var(--ink-light); font-size: 14.5px; font-weight: 600; letter-spacing: 0.2px; transition: color .2s; display: inline-flex; align-items: center; min-height: 44px; }
         .navlinks a.nl:hover { color: var(--emerald); }
         .navlinks a.nl.active { color: var(--emerald-deep); border-bottom: 2px solid var(--emerald); padding-bottom: 4px; }
-        .btn { display: inline-block; background: var(--emerald); color: #fff !important; padding: 10px 20px; border-radius: 8px; font-size: 14px; font-weight: 700; transition: background .2s, transform .15s; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; background: var(--emerald); color: #fff !important; padding: 12px 20px; border-radius: 8px; font-size: 14px; font-weight: 700; transition: background .2s, transform .15s; }
         .btn:hover { background: var(--emerald-deep); transform: translateY(-1px); }
         .menu-btn { display: none; background: none; border: 0; cursor: pointer; color: var(--ink); }
         .mobnav { display: none; }
@@ -127,7 +127,7 @@
         .method { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; counter-reset: step; }
         .step { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 24px; position: relative; }
         .step::before { counter-increment: step; content: "0" counter(step); font-size: 30px; font-weight: 800; color: var(--clay); display: block; margin-bottom: 10px; letter-spacing: -1px; }
-        .step h4 { font-size: 15.5px; font-weight: 800; margin-bottom: 6px; }
+        .step h3 { font-size: 15.5px; font-weight: 800; margin-bottom: 6px; }
         .step p { font-size: 13.5px; color: var(--ink-muted); }
 
         /* CTA */
@@ -140,15 +140,15 @@
         /* FOOTER */
         footer { background: var(--ink); color: #cbd5e1; padding: 64px 0 32px; margin-top: 40px; }
         .footer-grid { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 48px; }
-        .footer-grid h5 { color: #fff; font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; }
+        .footer-grid h3 { color: #fff; font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; }
         .footer-grid ul { list-style: none; }
-        .footer-grid ul li { margin-bottom: 10px; }
-        .footer-grid ul a { color: #94a3b8; font-size: 14.5px; }
+        .footer-grid ul li { margin-bottom: 0; }
+        .footer-grid ul a { color: #94a3b8; font-size: 14.5px; display: inline-block; padding: 8px 0; }
         .footer-grid ul a:hover { color: var(--emerald-light); }
         .brand-desc { color: #94a3b8; font-size: 14.5px; margin: 14px 0 18px; max-width: 320px; }
-        .socials a { color: #94a3b8; margin-right: 14px; display: inline-block; }
+        .socials a { color: #94a3b8; margin-right: 12px; display: inline-flex; align-items: center; justify-content: center; min-width: 32px; min-height: 36px; }
         .socials a:hover { color: var(--emerald-light); }
-        .footer-bottom { max-width: var(--maxw); margin: 44px auto 0; padding: 20px 24px 0; border-top: 1px solid #1f2937; display: flex; justify-content: space-between; font-size: 13px; color: #64748b; flex-wrap: wrap; gap: 8px; }
+        .footer-bottom { max-width: var(--maxw); margin: 44px auto 0; padding: 20px 24px 0; border-top: 1px solid #1f2937; display: flex; justify-content: space-between; font-size: 13px; color: #94a3b8; flex-wrap: wrap; gap: 8px; }
         @media (max-width: 900px) {
             .hero .maxw { grid-template-columns: 1fr; }
             .benefit-grid { grid-template-columns: 1fr; }
@@ -290,12 +290,13 @@
             </div>
             <div class="table-wrap">
                 <table>
+                    <caption style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Typical CO₂e avoided per tonne of each fuel</caption>
                     <thead>
                         <tr>
-                            <th>Fuel / feedstock</th>
-                            <th>Displaces</th>
-                            <th>Typical CO₂e avoided per tonne*</th>
-                            <th>Why</th>
+                            <th scope="col">Fuel / feedstock</th>
+                            <th scope="col">Displaces</th>
+                            <th scope="col">Typical CO₂e avoided per tonne*</th>
+                            <th scope="col">Why</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -339,19 +340,19 @@
             </div>
             <div class="method">
                 <div class="step">
-                    <h4>Baseline establishment</h4>
+                    <h3>Baseline establishment</h3>
                     <p>We document the fuel being displaced (coal/petcoke grade) and the counterfactual fate of the waste (open burning, landfill or dumping).</p>
                 </div>
                 <div class="step">
-                    <h4>Mass &amp; energy balance</h4>
+                    <h3>Mass &amp; energy balance</h3>
                     <p>Weighbridge records, moisture and calorific value lab tests, and dispatch logs track every tonne from collection to combustion.</p>
                 </div>
                 <div class="step">
-                    <h4>Emission factor accounting</h4>
+                    <h3>Emission factor accounting</h3>
                     <p>Savings are computed with conservative, published factors — accounting for transport, processing and any fossil fraction in the fuel.</p>
                 </div>
                 <div class="step">
-                    <h4>Third-party-ready reporting</h4>
+                    <h3>Third-party-ready reporting</h3>
                     <p>You receive a documented dataset that stands up to ESG audits, CDP disclosure and, where applicable, carbon credit validation.</p>
                 </div>
             </div>
@@ -385,7 +386,7 @@
                 </div>
             </div>
             <div>
-                <h5>Browse</h5>
+                <h3>Browse</h3>
                 <ul>
                     <li><a href="index.html#solutions">Solutions</a></li>
                     <li><a href="index.html#products">Products</a></li>
@@ -396,7 +397,7 @@
                 </ul>
             </div>
             <div>
-                <h5>Get in touch</h5>
+                <h3>Get in touch</h3>
                 <ul>
                     <li><a href="mailto:sriviisnu@climatecircle.com">sriviisnu@climatecircle.com</a></li>
                     <li><a href="tel:+918810241915">+91 8810241915</a></li>
