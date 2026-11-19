@@ -2952,3 +2952,20 @@ footer .f-brand .brand-desc { color: rgba(251, 248, 241, .66) !important; }
   footer .f-contact { padding-bottom: 0 !important; }
   footer .footer-grid { padding-bottom: 22px !important; }
 }
+
+/* v33 — restore proper mobile column flow (v31 grid override leaked into mobile) */
+@media (max-width: 1080px) {
+  footer .footer-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; gap: 30px 28px !important; }
+  footer .f-brand { grid-column: 1 / -1; }
+  footer .f-contact { grid-column: 1 / -1; }
+}
+@media (max-width: 620px) {
+  footer .footer-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; gap: 22px 20px !important; }
+  footer .footer-grid ul { gap: 0 !important; }
+  footer .footer-grid a { padding: 7px 0 !important; min-height: 36px; }
+  footer .socials a { width: 44px !important; height: 44px !important; }
+  footer .f-contact a.f-mail { font-size: 17px !important; }
+  footer .f-contact .f-addr { color: rgba(251, 248, 241, .66) !important; }
+  .footer-cta-btn { padding: 14px 22px !important; }
+  .footer-cta-title { font-size: 21px !important; }
+}
