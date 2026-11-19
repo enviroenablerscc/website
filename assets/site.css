@@ -2398,3 +2398,26 @@ footer .footer-bottom span, footer .footer-bottom a { color: rgba(251, 248, 241,
   filter: none !important;
   transition: none !important;
 }
+
+/* v17 — mobile menu: header's backdrop-filter made the fixed panel clamp to the header box */
+.mobnav {
+  position: fixed !important;
+  top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important;
+  height: 100dvh !important;
+  max-height: 100dvh !important;
+  width: 100% !important;
+  overflow-y: auto !important;
+  overscroll-behavior: contain;
+  padding: 96px var(--gut) 40px !important;
+  z-index: 999 !important;
+  background: var(--paper) !important;
+  border-top: 0 !important;
+}
+.mobnav.open { display: flex !important; }
+.mobnav a {
+  font-size: 26px !important;
+  padding: 18px 0 !important;
+  border-bottom: 1px solid var(--line) !important;
+  color: var(--ink) !important;
+}
+.mobnav a:last-child { border-bottom: 0 !important; }
