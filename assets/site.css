@@ -2935,3 +2935,20 @@ footer { padding-bottom: 8px !important; }
   footer .f-contact .f-addr { margin-top: 12px !important; padding-top: 12px !important; }
   footer .footer-bottom { padding: 16px 58px 30px 0 !important; }
 }
+
+/* v32 — final polish from second vision pass */
+footer .footer-bottom { justify-content: space-between !important; text-wrap: balance; }
+footer .footer-bottom span { max-width: 42ch; }
+footer .f-contact .f-addr {
+  width: 100% !important; border-top: 1px solid rgba(250, 247, 241, .14) !important;
+  color: rgba(251, 248, 241, .62) !important;
+}
+footer .f-contact a.f-tel { color: rgba(251, 248, 241, .64) !important; }
+footer .f-brand .brand-desc { color: rgba(251, 248, 241, .66) !important; }
+@media (max-width: 620px) {
+  footer .footer-bottom { padding: 18px 56px 26px 0 !important; }
+  footer .footer-bottom .f-mark { display: none !important; }
+  footer .f-contact ul { gap: 4px !important; }
+  footer .f-contact { padding-bottom: 0 !important; }
+  footer .footer-grid { padding-bottom: 22px !important; }
+}
