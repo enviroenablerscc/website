@@ -2539,3 +2539,71 @@ body.home .hero-panel {
   box-shadow: 0 26px 54px -34px rgba(23, 20, 15, .5) !important;
 }
 body.home .hero-rail { border-top: 1px solid rgba(23, 20, 15, .14) !important; }
+
+/* v25 — footer: ink-ground brand close, emerald rule, clearer columns, quiet legal strip */
+footer {
+  position: relative;
+  background: var(--ink) !important;
+  color: rgba(250, 247, 241, .78);
+  padding-top: clamp(56px, 7vw, 96px);
+  margin-top: clamp(40px, 6vw, 80px);
+  border-top: 3px solid var(--emerald);
+  overflow: hidden;
+}
+footer::after {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: radial-gradient(880px 380px at 90% -28%, rgba(4, 168, 120, .30), rgba(4, 168, 120, 0) 70%);
+}
+footer > * { position: relative; z-index: 1; }
+footer .footer-grid {
+  grid-template-columns: minmax(0, 1.7fr) repeat(auto-fit, minmax(148px, 1fr));
+  gap: clamp(32px, 5vw, 64px);
+  padding-bottom: clamp(44px, 5vw, 68px);
+  border-bottom: 1px solid rgba(250, 247, 241, .14);
+}
+footer .footer-grid h3,
+footer .footer-grid h4 {
+  color: #5fd0a6;
+  letter-spacing: .16em;
+  margin-bottom: 16px;
+}
+footer .footer-grid ul { display: flex; flex-direction: column; gap: 2px; }
+footer .footer-grid a {
+  color: rgba(250, 247, 241, .74);
+  padding: 7px 0;
+  transition: color .18s ease, transform .18s ease;
+}
+footer .footer-grid a:hover { color: #fff; transform: translateX(2px); }
+footer .footer-grid li { color: rgba(250, 247, 241, .60); line-height: 1.7; }
+footer .footer-grid .brand-logo { filter: brightness(0) invert(1); opacity: .94; }
+footer .footer-grid .brand-desc {
+  color: rgba(250, 247, 241, .58);
+  border-color: rgba(250, 247, 241, .14);
+  max-width: 40ch;
+  font-size: 14px;
+  line-height: 1.65;
+}
+footer .socials { gap: 10px; margin-top: 22px; }
+footer .socials a {
+  width: 40px; height: 40px;
+  border-color: rgba(250, 247, 241, .22);
+  color: rgba(250, 247, 241, .82);
+  transition: background .18s ease, border-color .18s ease, color .18s ease;
+}
+footer .socials a:hover {
+  background: var(--emerald);
+  border-color: var(--emerald);
+  color: #fff;
+}
+footer .footer-bottom {
+  border-top: 1px solid rgba(250, 247, 241, .12);
+  padding: 22px 0 30px;
+  color: rgba(250, 247, 241, .48);
+  letter-spacing: .12em;
+}
+footer .footer-bottom a { color: rgba(250, 247, 241, .66); }
+footer .footer-bottom a:hover { color: #fff; }
+@media (max-width: 640px) {
+  footer .footer-grid { gap: 28px; }
+  footer .footer-grid .brand-desc { max-width: none; }
+}
