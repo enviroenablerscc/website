@@ -2969,3 +2969,15 @@ footer .f-brand .brand-desc { color: rgba(251, 248, 241, .66) !important; }
   .footer-cta-btn { padding: 14px 22px !important; }
   .footer-cta-title { font-size: 21px !important; }
 }
+
+/* v34 — last pass: CTA balance, contrast, tighter rhythm */
+.footer-cta { column-gap: clamp(24px, 3vw, 44px) !important; }
+.footer-cta-title { max-width: 42ch !important; }
+.footer-cta-copy { min-width: 0; }
+@media (min-width: 861px) {
+  .footer-cta { padding-bottom: 30px !important; margin-bottom: 34px !important; }
+}
+footer .f-brand .brand-desc { color: rgba(251, 248, 241, .72) !important; }
+footer .socials a { border-color: rgba(251, 248, 241, .3) !important; color: rgba(251, 248, 241, .95) !important; }
+footer .f-contact .f-addr { color: rgba(251, 248, 241, .68) !important; }
+footer .f-contact a.f-tel { color: rgba(251, 248, 241, .7) !important; }
