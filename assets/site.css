@@ -2607,3 +2607,17 @@ footer .footer-bottom a:hover { color: #fff; }
   footer .footer-grid { gap: 28px; }
   footer .footer-grid .brand-desc { max-width: none; }
 }
+
+/* v26 — footer link legibility + hover detail */
+footer .footer-grid li a {
+  color: rgba(251, 248, 241, .84);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 6px;
+  transition: color .18s ease, border-color .18s ease, transform .18s ease;
+}
+footer .footer-grid li a:hover {
+  color: #fff;
+  border-bottom-color: rgba(95, 208, 166, .75);
+  transform: translateX(2px);
+}
