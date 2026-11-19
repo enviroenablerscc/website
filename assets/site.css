@@ -2685,3 +2685,15 @@ footer .footer-grid > div:last-child { padding-right: 0; }
   footer .footer-grid { grid-template-columns: minmax(0, 1fr) !important; }
   .footer-cta-btn { width: 100%; justify-content: center; }
 }
+
+/* v28 — footer on small screens: keep the two link groups side by side, brand spans */
+@media (max-width: 560px) {
+  footer .footer-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    gap: 26px 20px !important;
+  }
+  footer .footer-grid > div:first-child { grid-column: 1 / -1; }
+  footer .footer-grid h3 { margin-bottom: 4px; }
+  footer { padding-top: 44px; }
+  .footer-cta { padding-bottom: 26px; margin-bottom: 30px; }
+}
