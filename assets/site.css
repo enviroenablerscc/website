@@ -2479,3 +2479,37 @@ body.home .hero .hero-rail { margin-top: clamp(26px, 3.4vw, 46px) !important; }
   body.home .hero h1 { max-width: 100% !important; }
   body.home .hero-panel { max-width: none; }
 }
+
+/* v21 — home hero background: brand-toned wash, hairline grid, emerald glow (no photos) */
+body.home .hero { position: relative; isolation: isolate; background:
+    radial-gradient(1180px 560px at 86% -14%, rgba(4, 120, 87, .13), rgba(4, 120, 87, 0) 64%),
+    radial-gradient(900px 480px at -6% 112%, rgba(4, 120, 87, .07), rgba(4, 120, 87, 0) 62%),
+    linear-gradient(180deg, #faf7f0 0%, #f5f0e5 72%, #f7f3ea 100%) !important;
+}
+body.home .hero::before {
+  content: '' !important; display: block !important; position: absolute; inset: 0; z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgba(23, 20, 15, .05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(23, 20, 15, .05) 1px, transparent 1px);
+  background-size: 86px 86px;
+  -webkit-mask-image: radial-gradient(128% 96% at 74% 0%, #000 26%, transparent 76%);
+  mask-image: radial-gradient(128% 96% at 74% 0%, #000 26%, transparent 76%);
+}
+body.home .hero::after {
+  content: '' !important; display: block !important; position: absolute; z-index: 0;
+  right: -140px; top: -120px; width: 620px; height: 620px; pointer-events: none;
+  border-radius: 50%;
+  border: 1px solid rgba(4, 120, 87, .16);
+  box-shadow: inset 0 0 0 90px rgba(4, 120, 87, .035), inset 0 0 0 91px rgba(4, 120, 87, .10);
+}
+body.home .hero .wrap { position: relative; z-index: 2; }
+body.home .hero-panel { background: #fffdf8 !important; box-shadow: 0 22px 48px -34px rgba(23, 20, 15, .42); }
+body.home .hero-rail { border-top-color: rgba(4, 120, 87, .22) !important; }
+@media (max-width: 1024px) {
+  body.home .hero::after { width: 420px; height: 420px; right: -160px; top: -160px; }
+  body.home .hero::before { background-size: 68px 68px; }
+}
+@media (max-width: 700px) {
+  body.home .hero::after { width: 320px; height: 320px; right: -150px; top: -140px; }
+}
