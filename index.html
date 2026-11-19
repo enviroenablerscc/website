@@ -59,7 +59,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
     <!-- HERO v3 : photo shown whole (880x550 native), blurred ambience behind the copy -->
 
@@ -68,7 +68,7 @@
     <!-- HERO v4 : whole photo behind, copy in front, contained ~70% band -->
 
 
-    <link rel="stylesheet" href="assets/site.css?v=34" />
+    <link rel="stylesheet" href="assets/site.css?v=10" />
 </head>
 <body class="home">
 
@@ -115,34 +115,40 @@
 
     <!-- HERO -->
     <section class="hero" id="main">
+        <div class="hero-slider" aria-hidden="true">
+            <div class="slider-track">
+                                        <div class="slide active">
+                                            <img src="g-agri-pelletizer.jpg" alt="Pelletizing plant producing alternate fuel">
+                                            <div class="slide-cap"><span>Fuels engineered on site</span><small>Feedstock densified, sized &amp; tested to spec</small></div>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="g-plastic-truck.jpg" alt="Plastic AFR bales dispatched" loading="lazy">
+                                            <div class="slide-cap"><span>Dispatch at scale</span><small>Delivered to cement plants</small></div>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="g-agri-bales.jpg" alt="Baled agri-residue feedstock" loading="lazy">
+                                            <div class="slide-cap"><span>Agri-residue feedstock</span><small>Sourced &amp; baled at source</small></div>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="g-agri-briquettes.jpg" alt="Agri-residue biomass briquettes" loading="lazy">
+                                            <div class="slide-cap"><span>Biomass briquettes</span><small>For power plants &amp; FMCG boilers</small></div>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="g-biomass-pellets.jpg" alt="Biomass pellets for industrial fuel" loading="lazy">
+                                            <div class="slide-cap"><span>Biomass pellets</span><small>Low-ash, high heat value</small></div>
+                                        </div>
+            </div>
+        </div>
+        <div class="hero-amb" aria-hidden="true"></div>
         <div class="wrap">
             <div class="hero-grid">
                 <div class="hero-copy reveal">
-                    <span class="hero-kicker">Plastic &amp; agri-residue → alternate fuel</span>
                     <h1>Turning waste into <span class="dim">industrial-grade fuel.</span></h1>
                     <p class="hero-sub">Non-recyclable plastic and surplus agri-residue become verified, high-calorific alternate fuel for cement kilns, power plants and FMCG boilers — replacing coal and petcoke, tonne for tonne.</p>
-                    <div class="hero-actions">
-                        <a class="btn btn-primary" href="#contact">Request a spec sheet →</a>
-                        <a class="btn btn-outline" href="#solutions">Explore solutions</a>
-                    </div>
                 </div>
-                <aside class="hero-panel reveal">
-                    <span class="eyebrow">Fuel we deliver</span>
-                    <ul>
-                        <li><span>Cement</span> Plastic &amp; biomass AFR for kilns</li>
-                        <li><span>Power</span> Agri-residue pellets for co-firing</li>
-                        <li><span>FMCG</span> Briquettes for captive boilers</li>
-                    </ul>
-                    <div class="panel-foot">GCV tested every batch · Pan-India dispatch</div>
-                </aside>
-            </div>
-            <div class="hero-rail">
-                <span>15-year pan-India AFR agreement</span>
-                <span>117,238+ t biomass supplied</span>
-                <span>57,755+ t plastic diverted</span>
-                <span>Zero-landfill route</span>
             </div>
         </div>
+        <div class="slider-dots" role="tablist" aria-label="Feedstock images"></div>
     </section>
 
     <!-- HERO INTRO (pushed below the image) -->
@@ -150,7 +156,10 @@
         <div class="wrap">
             <span class="eyebrow">Circularity at industrial scale</span>
             <p class="intro-desc">ENVIRO ENABLERS converts non-recyclable plastic waste and surplus agri-residue into reliable, high-calorific alternate fuels — replacing coal and petcoke in cement, power and FMCG, and curbing open burning at the source.</p>
-            
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="#contact">Request a spec sheet →</a>
+                <a class="btn btn-outline" href="#solutions">Explore solutions</a>
+            </div>
             <div class="hero-metrics">
                 <div class="hero-metric">
                     <div class="val">15<span style="font-size:0.7rem;font-weight:400">-year</span></div>
@@ -161,7 +170,7 @@
                     <div class="lbl">Tonnes of biomass fuel supplied</div>
                 </div>
                 <div class="hero-metric">
-                    <div class="val emerald count" data-target="57755" data-suffix="+">0</div>
+                    <div class="val emerald count" data-target="57702" data-suffix="+">0</div>
                     <div class="lbl">Tonnes of plastic waste diverted</div>
                 </div>
             </div>
@@ -205,40 +214,29 @@
     <!-- SOLUTIONS -->
     <section id="solutions" class="solutions-section">
         <div class="wrap">
-            <div class="sec-head split reveal">
-                <div class="sh-main">
-                    <span class="eyebrow">What we do</span>
-                    <h2>Decarbonization solutions for <span class="dim">hard-to-abate sectors</span></h2>
-                </div>
+            <div class="sec-head reveal">
+                <span class="eyebrow">What we do</span>
+                <h2>Decarbonization solutions for <span class="dim">hard-to-abate sectors</span></h2>
                 <p class="lead">We convert waste plastics and agri-residues into reliable, compliant, high-performance fuels — backed by track-trace-audit reporting.</p>
             </div>
-            <div class="sol-rows">
-                <div class="sol-row reveal">
+            <div class="grid-3">
+                <div class="solution-card reveal">
                     <span class="num">/ 01</span>
-                    <div class="sol-txt">
-                        <h3>Plastic-derived AFR for cement kilns</h3>
-                        <p>Non-recyclable plastic replacing coal and petcoke, under long-tenor supply agreements.</p>
-                    </div>
-                    <div class="sol-thumb"><img src="new_g-plastic-truck.webp" alt="Truck loaded with baled plastic feedstock leaving a collection site" width="880" height="550" loading="lazy"></div>
-                    <a class="solution-link" href="#contact">Spec sheet →</a>
+                    <h3>Plastic-derived AFR for cement kilns</h3>
+                    <p>Cleaned, shredded and densified non-recyclable plastic replacing coal and petcoke in cement kilns — supplied under long-tenor agreements.</p>
+                    <a class="solution-link" href="#contact">Request spec sheet →</a>
                 </div>
-                <div class="sol-row reveal">
+                <div class="solution-card reveal">
                     <span class="num">/ 02</span>
-                    <div class="sol-txt">
-                        <h3>Agri-residue pellets for power plants</h3>
-                        <p>Non-torrefied pellets for thermal power and captive co-firing — stubble kept out of the fire.</p>
-                    </div>
-                    <div class="sol-thumb"><img src="new_g-agri-bales.webp" alt="Agri-residue bales stacked at a collection point" width="880" height="550" loading="lazy"></div>
-                    <a class="solution-link" href="#contact">Spec sheet →</a>
+                    <h3>Agri-residue pellets for power plants</h3>
+                    <p>Non-torrefied biomass pellets for thermal power plants and captive co-firing — curbing stubble burning at the source.</p>
+                    <a class="solution-link" href="#contact">Request spec sheet →</a>
                 </div>
-                <div class="sol-row reveal">
+                <div class="solution-card reveal">
                     <span class="num">/ 03</span>
-                    <div class="sol-txt">
-                        <h3>Biomass briquettes for process steam</h3>
-                        <p>Densified briquettes for FMCG captive boilers: steady calorific value, stable combustion.</p>
-                    </div>
-                    <div class="sol-thumb"><img src="new_g-agri-pelletizer.webp" alt="Pelletizing line processing agri-residue into fuel" width="880" height="550" loading="lazy"></div>
-                    <a class="solution-link" href="#contact">Spec sheet →</a>
+                    <h3>Biomass briquettes for process steam</h3>
+                    <p>Densified agri-residue briquettes for FMCG captive boilers and process steam — assured sourcing and consistent calorific value.</p>
+                    <a class="solution-link" href="#contact">Request spec sheet →</a>
                 </div>
             </div>
         </div>
@@ -284,40 +282,40 @@
     <!-- PRODUCTS -->
     <section id="products" class="products-section">
         <div class="wrap">
-            <div class="sec-head split wide reveal">
-                <div class="sh-main">
-                    <span class="eyebrow">Products</span>
-                    <h2>Engineered fuels for <span class="dim">industrial decarbonization</span></h2>
-                </div>
+            <div class="sec-head reveal">
+                <span class="eyebrow">Products</span>
+                <h2>Engineered fuels for <span class="dim">industrial decarbonization</span></h2>
                 <p class="lead">From kiln-grade plastic AFR to agri biomass pellets, briquettes and compressed bio-gas — built for industrial reliability.</p>
             </div>
             <div class="grid-3">
                 <div class="product-card reveal">
-                    <div class="prod-media"><img src="new_g-plastic-bale.webp" alt="Baled non-recyclable plastic feedstock" width="880" height="550" loading="lazy"></div>
+                    <div class="prod-icon ink-bg">🔥</div>
                     <h3>Plastic-Derived AFR</h3>
-                    <p>High-CV kiln fuel, supplied to spec with lab-backed QA.</p>
+                    <p>High-CV alternate fuel for cement kilns and high-temperature applications, supplied to spec with lab-backed QA.</p>
                     <div class="spec">CV 4,000–5,500 Kcal/kg</div>
                 </div>
                 <div class="product-card reveal">
-                    <div class="prod-media"><img src="new_g-biomass-pellets.webp" alt="Biomass pellets in bulk" width="880" height="550" loading="lazy"></div>
+                    <div class="prod-icon emerald-bg">🌾</div>
                     <h3>Agri-Residue Biomass Pellets</h3>
-                    <p>Assured sourcing and delivery for co-firing programmes.</p>
+                    <p>Non-torrefied biomass pellets for thermal power plants and captive co-firing, with assured sourcing and delivery.</p>
                     <div class="spec">NTPC &amp; L&amp;T Power spec</div>
                 </div>
                 <div class="product-card reveal">
-                    <div class="prod-media"><img src="new_g-agri-briquettes.webp" alt="Agri-residue briquettes stacked" width="880" height="550" loading="lazy"></div>
+                    <div class="prod-icon rust-bg">🧱</div>
                     <h3>Agri-Residue Briquettes</h3>
-                    <p>Steady calorific value for FMCG captive boilers.</p>
+                    <p>Densified briquettes for FMCG captive boilers and process steam — consistent calorific value and stable combustion.</p>
                     <div class="spec">FMCG grade</div>
                 </div>
-                <div class="product-card noimg reveal">
+                <div class="product-card reveal">
+                    <div class="prod-icon emerald-bg">⛽</div>
                     <h3>Compressed Bio-Gas (CBG)</h3>
-                    <p>Agri-residue gas via our AMI joint venture; organic fertiliser as co-product.</p>
+                    <p>Clean compressed gas from agri-residue via the AMI–Enviro Enablers partnership, with FOM organic fertilizer as a co-product.</p>
                     <div class="spec">AMI–Enviro SPV</div>
                 </div>
-                <div class="product-card noimg reveal">
+                <div class="product-card reveal">
+                    <div class="prod-icon ink-bg">📊</div>
                     <h3>Track-Trace-Audit MRV</h3>
-                    <p>Chain of custody and verified CO₂-abatement records for every tonne.</p>
+                    <p>Every tonne of feedstock and fuel tracked end-to-end — MRV-ready chain of custody and verified CO₂-abatement documentation.</p>
                     <div class="spec">Audit-ready</div>
                 </div>
             </div>
@@ -327,10 +325,10 @@
     <!-- IMPACT -->
     <section id="impact" class="impact-section">
         <div class="wrap">
-            <div class="sec-head wide reveal">
+            <div class="sec-head reveal">
                 <span class="eyebrow">Impact &amp; track record</span>
                 <h2>Measurable social &amp; environmental results</h2>
-                <p class="lead">Value for industry, the climate and the communities at the source of our feedstock.</p>
+                <p class="lead">Creating long-term value — for industry, the climate, and the communities at the source of our feedstock.</p>
             </div>
             <div class="grid-4">
                 <div class="impact-card reveal">
@@ -340,7 +338,7 @@
                 </div>
                 <div class="impact-card reveal">
                     <span class="sdg-ref">SDG 12</span>
-                    <div class="val count" data-target="57755" data-suffix="+">0</div>
+                    <div class="val count" data-target="57702" data-suffix="+">0</div>
                     <span>Tonnes of non-recyclable plastic converted to cement fuel</span>
                 </div>
                 <div class="impact-card reveal">
@@ -372,9 +370,9 @@
     <!-- LEADERSHIP -->
     <section id="leadership" class="leadership-section">
         <div class="wrap">
-            <div class="sec-head tight reveal">
+            <div class="sec-head reveal">
                 <span class="eyebrow">Leadership</span>
-                <h2>Pioneering <span class="dim">sustainable growth</span></h2>
+                <h2>Pioneering Sustainable Growth Through Innovation, Integrity, and Impact</h2>
                 <p class="lead">An experienced, high-integrity team spanning environment policy, energy, finance and governance.</p>
             </div>
             <div class="section-subhead">Board of Directors</div>
@@ -511,62 +509,39 @@
 
     <!-- FOOTER -->
     <footer>
-        <div class="wrap">
-            <div class="footer-cta">
-                <div class="footer-cta-copy">
-                    <p class="footer-cta-kicker">Start a conversation</p>
-                    <h2 class="footer-cta-title">Turn your waste into verified alternate fuel.</h2>
-                </div>
-                <div class="footer-cta-actions">
-                    <a class="footer-cta-btn" href="mailto:sriviisnu@climatecircle.com?subject=Alternate%20fuel%20partnership">
-                        <span>Write to us</span>
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                    </a>
-                    <a class="footer-cta-alt" href="tel:+918810241915">or call <b>+91 88102 41915</b></a>
+        <div class="footer-grid">
+            <div>
+                <a class="brand" href="#top">
+                    <img class="brand-logo" src="logo.webp" alt="Enviro Enablers" width="1100" height="363">
+                </a>
+                <p class="brand-desc">Enviro Enablers India Private Limited — an outcome-first decarbonization partner turning waste into verified industrial energy.</p>
+                <div class="socials">
+                    <a href="https://in.linkedin.com/company/enviro-enablers" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.64 4.75 6.07V21H17v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21H9z"/></svg></a>
+                    <a href="mailto:sriviisnu@climatecircle.com" aria-label="Email"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg></a>
                 </div>
             </div>
-            <div class="footer-grid">
-                <div class="f-brand">
-                    <a class="brand" href="#top" aria-label="Enviro Enablers home">
-                        <img class="brand-logo" src="logo.webp" alt="Enviro Enablers" width="1100" height="363">
-                    </a>
-                    <p class="brand-desc">An outcome-first decarbonisation partner turning non-recyclable waste into verified industrial energy.</p>
-                    <div class="socials">
-                        <a href="https://in.linkedin.com/company/enviro-enablers" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.64 4.75 6.07V21H17v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21H9z"/></svg></a>
-                        <a href="mailto:sriviisnu@climatecircle.com" aria-label="Email us"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg></a>
-                    </div>
-                </div>
-                <nav class="f-col" aria-label="Company">
-                    <h3>Company</h3>
-                    <ul>
-                        <li><a href="#leadership">Leadership</a></li>
-                        <li><a href="sustainability.html">Sustainability</a></li>
-                        <li><a href="governance.html">Governance</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                    </ul>
-                </nav>
-                <nav class="f-col" aria-label="Explore">
-                    <h3>Explore</h3>
-                    <ul>
-                        <li><a href="#solutions">Solutions</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#impact">Impact</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="f-col f-contact">
-                    <h3>Get in touch</h3>
-                    <ul>
-                        <li><a class="f-mail" href="mailto:sriviisnu@climatecircle.com">sriviisnu@climatecircle.com</a></li>
-                        <li><a class="f-tel" href="tel:+918810241915">+91 88102 41915</a></li>
-                        <li class="f-addr">D-29, Anand Niketan,<br>New Delhi 110021, India</li>
-                    </ul>
-                </div>
+            <div>
+                <h3>Browse</h3>
+                <ul>
+                    <li><a href="#solutions">Solutions</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#impact">Impact</a></li>
+                    <li><a href="#leadership">Leadership</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
-            <div class="footer-bottom">
-                <span>© 2026 Enviro Enablers India Pvt Ltd</span>
-                <span class="f-mark">ENVIRO ENABLERS</span>
+            <div>
+                <h3>Get in touch</h3>
+                <ul>
+                    <li><a href="mailto:sriviisnu@climatecircle.com">sriviisnu@climatecircle.com</a></li>
+                    <li><a href="tel:+918810241915">+91 8810241915</a></li>
+                    <li>D-29, Anand Niketan,<br>New Delhi-110021</li>
+                </ul>
             </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Enviro Enablers India Private Limited. All rights reserved.</span>
+            <span>ENVIRO ENABLERS</span>
         </div>
     </footer>
 
