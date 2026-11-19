@@ -1780,8 +1780,8 @@ body.home header.scrolled .brand {
   .sec-head.wide h2, .sec-head.tight h2, .sec-head.split.wide h2 { max-width: none; }
 }
 
-/* numbered step markers (careers) */
-.dot {
+/* numbered step markers (careers apply list only) */
+li .dot {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1796,4 +1796,58 @@ body.home header.scrolled .brand {
   font-family: var(--ff-m);
   font-size: 10px;
   letter-spacing: 0.08em;
+}
+
+/* ---------- v13: photography-led sections ---------- */
+.sol-rows { border-top: 1px solid var(--line); }
+.sol-row {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) clamp(140px, 14vw, 190px) 116px;
+  gap: clamp(14px, 2.2vw, 32px);
+  align-items: center;
+  padding: clamp(16px, 1.9vw, 24px) 0;
+  border-bottom: 1px solid var(--line);
+}
+.sol-row .num {
+  font-family: var(--ff-m);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--t3);
+  align-self: start;
+  padding-top: 4px;
+}
+.sol-row h3 { max-width: 26ch; }
+.sol-row p { color: var(--t2); font-size: 14px; margin: 7px 0 0; max-width: 48ch; }
+.sol-thumb { aspect-ratio: 16 / 10; overflow: hidden; background: var(--grey); }
+.sol-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s var(--ease); }
+.sol-row:hover .sol-thumb img { transform: scale(1.03); }
+.sol-row .solution-link { margin-top: 0; padding-top: 0; border-top: 0; justify-content: flex-end; white-space: nowrap; }
+.sol-row:hover .num { color: var(--emerald); }
+
+.prod-media { aspect-ratio: 16 / 10; overflow: hidden; background: var(--ink); margin-bottom: 2px; }
+.prod-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.product-card h3 { margin-top: 4px; }
+.product-card.noimg { background: var(--ink); }
+.product-card.noimg h3 { color: var(--w1); }
+.product-card.noimg p { color: rgba(255,255,255,0.72); }
+.product-card.noimg .spec { color: var(--emerald); border-top-color: rgba(255,255,255,0.18); }
+
+@media (max-width: 900px) {
+  .sol-row { grid-template-columns: 32px minmax(0, 1fr); row-gap: 12px; }
+  .sol-row .solution-link { min-height: 44px; align-items: center; }
+  .sol-thumb { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+  .sol-row .solution-link { grid-column: 1 / -1; justify-content: flex-start; }
+  .sol-row p { max-width: none; }
+}
+
+/* footer: stop the oversized wordmark forcing horizontal scroll on phones */
+@media (max-width: 700px) {
+  footer, .footer { overflow-x: hidden; }
+  footer * { max-width: 100%; }
+}
+
+/* tap targets for the row links */
+.sol-row .solution-link { min-height: 32px; align-items: center; }
+@media (max-width: 900px) {
+  .sol-row .solution-link { min-height: 44px; padding-top: 2px; }
 }
