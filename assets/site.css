@@ -32,7 +32,7 @@
   /* metrics */
   --maxw: 1334px;
   --gut: clamp(22px, 4vw, 56px);
-  --pad: clamp(40px, 5vw, 72px);
+  --pad: clamp(36px, 4.4vw, 64px);
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -1749,4 +1749,51 @@ body.home header.scrolled .brand {
 
 @media (max-width: 900px) {
   a[href^="mailto:"], a[href^="tel:"] { display: inline-flex !important; align-items: center; min-height: 44px; }
+}
+
+/* ---------- v12: heading system ---------- */
+.sec-head h2 { font-size: clamp(27px, 2.9vw, 40px); line-height: 1.02; max-width: 26ch; }
+.sec-head { margin-bottom: clamp(20px, 2.4vw, 30px); }
+.sec-head .eyebrow { margin-bottom: 11px; }
+.sec-head .lead { margin-top: 12px; max-width: 44ch; }
+
+.sec-head.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr);
+  gap: clamp(20px, 4vw, 64px);
+  align-items: end;
+}
+.sec-head.split .sh-main { min-width: 0; }
+.sec-head.split .lead { margin-top: 0; max-width: 42ch; }
+.sec-head.split.wide h2 { max-width: 24ch; }
+
+.sec-head.wide h2 { max-width: 34ch; }
+.sec-head.wide .lead { max-width: 60ch; }
+
+.sec-head.tight h2 { max-width: 17ch; }
+
+/* smaller viewports */
+@media (max-width: 900px) {
+  .sec-head h2 { font-size: clamp(23px, 5.6vw, 32px); max-width: 30ch; }
+  .sec-head.split { grid-template-columns: 1fr; gap: 12px; align-items: start; }
+  .sec-head.split .lead { max-width: none; }
+  .sec-head.wide h2, .sec-head.tight h2, .sec-head.split.wide h2 { max-width: none; }
+}
+
+/* numbered step markers (careers) */
+.dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  min-width: 26px;
+  height: 22px;
+  padding: 0 6px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--t2);
+  font-family: var(--ff-m);
+  font-size: 10px;
+  letter-spacing: 0.08em;
 }
