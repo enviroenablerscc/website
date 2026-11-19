@@ -2390,3 +2390,11 @@ footer .footer-bottom span, footer .footer-bottom a { color: rgba(251, 248, 241,
 /* v14 — hero vertical rhythm */
 .page-hero .hero-grid, .hero--short .hero-grid { padding-top: 0 !important; }
 .hero-grid { align-items: center; min-height: min(84vh, 700px); }
+
+/* v15 — reveal safety: content must never stay invisible if the observer misses */
+.reveal, .reveal.in, .reveal.visible, .reveal.is-visible {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+  transition: none !important;
+}
