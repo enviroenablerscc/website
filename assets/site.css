@@ -2621,3 +2621,67 @@ footer .footer-grid li a:hover {
   border-bottom-color: rgba(95, 208, 166, .75);
   transform: translateX(2px);
 }
+
+/* v27 — footer CTA band + aligned container + tighter columns */
+footer > .wrap { position: relative; z-index: 1; }
+.footer-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(20px, 4vw, 48px);
+  flex-wrap: wrap;
+  padding-bottom: clamp(32px, 4vw, 48px);
+  margin-bottom: clamp(36px, 4.5vw, 56px);
+  border-bottom: 1px solid rgba(250, 247, 241, .14);
+}
+.footer-cta-kicker {
+  margin: 0 0 10px;
+  font-family: var(--ff-m);
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #5fd0a6;
+}
+.footer-cta-title {
+  margin: 0;
+  font-family: var(--ff-d, var(--ff-m));
+  font-weight: 500;
+  font-size: clamp(21px, 2.5vw, 31px);
+  line-height: 1.2;
+  letter-spacing: -.015em;
+  color: #fbf8f1;
+  max-width: 26ch;
+}
+.footer-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  background: var(--emerald);
+  color: #fff !important;
+  font-family: var(--ff-m);
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+  box-shadow: 0 14px 30px -18px rgba(4, 168, 120, .9);
+}
+.footer-cta-btn:hover { background: #0bb37f; transform: translateY(-1px); }
+.footer-cta-btn svg { transition: transform .2s ease; }
+.footer-cta-btn:hover svg { transform: translateX(3px); }
+footer .footer-grid {
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, .7fr) minmax(0, 1fr) !important;
+  align-items: start;
+}
+footer .footer-grid > div:last-child { padding-right: 0; }
+@media (max-width: 900px) {
+  footer .footer-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; }
+  footer .footer-grid > div:first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 560px) {
+  footer .footer-grid { grid-template-columns: minmax(0, 1fr) !important; }
+  .footer-cta-btn { width: 100%; justify-content: center; }
+}
