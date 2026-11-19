@@ -2879,3 +2879,59 @@ footer .footer-bottom a { color: rgba(251, 248, 241, .74) !important; }
   footer .f-contact .f-addr { margin-top: 8px !important; font-size: 12.5px !important; }
   footer .footer-bottom { padding: 16px 0 22px !important; }
 }
+
+/* ============ FOOTER v31 — vision-driven corrections ============ */
+/* 1. column direction bug: labels were rendering under the links */
+footer .footer-grid .f-col,
+footer .footer-grid .f-brand {
+  display: flex !important; flex-direction: column !important;
+  align-items: flex-start !important; text-align: left !important;
+}
+footer .footer-grid .f-col h3 { order: 0 !important; }
+footer .footer-grid .f-col ul { order: 1 !important; width: 100% !important; align-items: flex-start !important; }
+footer .footer-grid .f-brand .brand { order: 0 !important; }
+footer .footer-grid .f-brand .brand-desc { order: 1 !important; }
+footer .footer-grid .f-brand .socials { order: 2 !important; }
+
+/* 2. CTA: bridge the void, align actions to the headline's last line */
+.footer-cta { display: grid !important; grid-template-columns: minmax(0, 1fr) auto !important; align-items: end !important; }
+.footer-cta-title { max-width: 30ch !important; }
+.footer-cta-actions { justify-content: flex-end; align-items: baseline; }
+.footer-cta-btn { font-size: 12px !important; letter-spacing: .1em !important; padding: 15px 26px !important; }
+
+/* 3. labels tuned down, links tuned up — true hierarchy */
+footer .footer-grid h3 { font-size: 11px !important; letter-spacing: .16em !important; color: #86c9b0 !important; }
+footer .footer-grid a { color: rgba(251, 248, 241, .88) !important; }
+
+/* 4. contact reads as contact, not form fields */
+footer .f-contact { padding-top: 0 !important; }
+footer .f-contact ul { gap: 6px !important; }
+footer .f-contact a.f-mail,
+footer .f-contact a.f-tel { border-bottom: 0 !important; padding: 2px 0 !important; }
+footer .f-contact a.f-mail { font-size: 18px !important; font-weight: 500 !important; color: #fbf8f1 !important; line-height: 1.35 !important; }
+footer .f-contact a.f-tel { font-size: 14.5px !important; color: rgba(251, 248, 241, .58) !important; margin-top: 2px; }
+footer .f-contact a.f-tel:hover, footer .f-contact a.f-mail:hover { color: #fff !important; }
+footer .f-contact .f-addr { margin-top: 14px !important; padding-top: 14px !important; border-top: 1px solid rgba(250, 247, 241, .13); }
+
+/* 5. drop the orphaned vertical rules; gutters do the work */
+footer .footer-grid .f-col::before { display: none !important; }
+footer .footer-grid { grid-template-columns: minmax(0, 1.5fr) minmax(0, .85fr) minmax(0, .85fr) minmax(0, 1.2fr) !important; }
+
+/* 6. move the wash out from under the copy */
+footer::after { background: radial-gradient(680px 300px at 96% 4%, rgba(4, 168, 120, .16), rgba(4, 168, 120, 0) 70%) !important; }
+
+/* 7. clear the fixed scroll-to-top button */
+footer { padding-bottom: 8px !important; }
+@media (max-width: 960px) {
+  footer .footer-bottom { padding-right: 62px !important; padding-bottom: 34px !important; }
+  footer .footer-bottom .f-mark { order: 3; width: 100%; padding-right: 0; }
+}
+@media (max-width: 620px) {
+  .footer-cta { grid-template-columns: minmax(0, 1fr) !important; gap: 18px !important; }
+  .footer-cta-btn { width: 100%; justify-content: center; font-size: 12px !important; }
+  .footer-cta-actions { flex-direction: column; align-items: flex-start; gap: 12px; }
+  footer .f-contact { padding-top: 4px !important; }
+  footer .f-contact a.f-mail { font-size: 16.5px !important; }
+  footer .f-contact .f-addr { margin-top: 12px !important; padding-top: 12px !important; }
+  footer .footer-bottom { padding: 16px 58px 30px 0 !important; }
+}
