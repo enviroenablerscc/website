@@ -2530,3 +2530,12 @@ body.home .hero {
     radial-gradient(720px 400px at 2% 112%, rgba(176, 138, 62, .10), rgba(176, 138, 62, 0) 60%),
     linear-gradient(180deg, #fbf8f1 0%, #f7f2e7 100%) !important;
 }
+
+/* v24 — hero panel definition: pure white card, stronger hairline, emerald top rule */
+body.home .hero-panel {
+  background: #ffffff !important;
+  border: 1px solid rgba(23, 20, 15, .16) !important;
+  border-top: 2px solid var(--emerald) !important;
+  box-shadow: 0 26px 54px -34px rgba(23, 20, 15, .5) !important;
+}
+body.home .hero-rail { border-top: 1px solid rgba(23, 20, 15, .14) !important; }
