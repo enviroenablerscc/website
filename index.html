@@ -800,6 +800,30 @@
             flex: 1;
             line-height: 1.6;
         }
+        /* photo band inside product cards — dissolves into the card, text in front below */
+        .prod-photo {
+            position: relative;
+            margin: -36px -32px 26px;
+            height: 200px;
+            overflow: hidden;
+            background: var(--sand);
+        }
+        .prod-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.55s var(--ease);
+        }
+        .prod-photo::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: linear-gradient(180deg, rgba(250,248,245,0) 38%, rgba(250,248,245,0.55) 74%, var(--paper) 100%);
+        }
+        .product-card:hover .prod-photo img { transform: scale(1.045); }
+        .product-card:hover .prod-photo::after { background: linear-gradient(180deg, rgba(255,255,255,0) 38%, rgba(255,255,255,0.55) 74%, #fff 100%); }
         .product-card .spec {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.72rem;
@@ -1470,15 +1494,15 @@
 
         /* HERO — photo blends into the page; text sits on the faded left side */
         .hero {
-            padding: 56px 32px 54px;
+            padding: 86px 32px 78px;
             overflow: hidden;
-            min-height: 500px;
+            min-height: 0;
         }
         .hero > .wrap { position: static; }
         .hero-grid { display: block; }
         .hero-grid > .reveal:first-child {
             display: block;
-            max-width: 640px;
+            max-width: 780px;
             padding: 0;
         }
         .hero-grid > .reveal:first-child { position: relative; z-index: 2; }
@@ -1612,31 +1636,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="hero-slider reveal">
-                    <div class="slider-track">
-                        <div class="slide active">
-                            <img src="g-plastic-bale.jpg" alt="Densified plastic alternate fuel bale" loading="lazy">
-                            <div class="slide-cap"><span>Densified plastic AFR</span><small>Cleaned, shredded &amp; baled to spec</small></div>
-                        </div>
-                        <div class="slide">
-                            <img src="g-plastic-truck.jpg" alt="Plastic AFR bales dispatched" loading="lazy">
-                            <div class="slide-cap"><span>Dispatch at scale</span><small>Delivered to cement plants</small></div>
-                        </div>
-                        <div class="slide">
-                            <img src="g-agri-bales.jpg" alt="Baled agri-residue feedstock" loading="lazy">
-                            <div class="slide-cap"><span>Agri-residue feedstock</span><small>Sourced &amp; baled at source</small></div>
-                        </div>
-                        <div class="slide">
-                            <img src="g-agri-pelletizer.jpg" alt="Biomass pelletizing line" loading="lazy">
-                            <div class="slide-cap"><span>Pelletizing line</span><small>Densified into uniform fuel</small></div>
-                        </div>
-                        <div class="slide">
-                            <img src="g-agri-briquettes.jpg" alt="Agri-residue biomass briquettes" loading="lazy">
-                            <div class="slide-cap"><span>Biomass briquettes</span><small>For power plants &amp; FMCG boilers</small></div>
-                        </div>
-                    </div>
-                    <div class="slider-dots"></div>
-                </div>
             </div>
         </div>
     </section>
@@ -1737,31 +1736,31 @@
             </div>
             <div class="grid-3">
                 <div class="product-card reveal">
-                    <div class="prod-icon ink-bg">🔥</div>
+                    <div class="prod-photo"><img src="g-plastic-bale.jpg" alt="Densified plastic alternate fuel bales" loading="lazy"></div>
                     <h3>Plastic-Derived AFR</h3>
                     <p>High-CV alternate fuel for cement kilns and high-temperature applications, supplied to spec with lab-backed QA.</p>
                     <div class="spec">CV 4,000–5,500 Kcal/kg</div>
                 </div>
                 <div class="product-card reveal">
-                    <div class="prod-icon emerald-bg">🌾</div>
+                    <div class="prod-photo"><img src="g-agri-bales.jpg" alt="Baled agri-residue feedstock for pelleting" loading="lazy"></div>
                     <h3>Agri-Residue Biomass Pellets</h3>
                     <p>Non-torrefied biomass pellets for thermal power plants and captive co-firing, with assured sourcing and delivery.</p>
                     <div class="spec">NTPC &amp; L&amp;T Power spec</div>
                 </div>
                 <div class="product-card reveal">
-                    <div class="prod-icon rust-bg">🧱</div>
+                    <div class="prod-photo"><img src="g-agri-briquettes.jpg" alt="Densified agri-residue briquettes" loading="lazy"></div>
                     <h3>Agri-Residue Briquettes</h3>
                     <p>Densified briquettes for FMCG captive boilers and process steam — consistent calorific value and stable combustion.</p>
                     <div class="spec">FMCG grade</div>
                 </div>
                 <div class="product-card reveal">
-                    <div class="prod-icon emerald-bg">⛽</div>
+                    <div class="prod-photo"><img src="g-agri-pelletizer.jpg" alt="Pelletising and fuel processing line" loading="lazy"></div>
                     <h3>Compressed Bio-Gas (CBG)</h3>
                     <p>Clean compressed gas from agri-residue via the AMI–Enviro Enablers partnership, with FOM organic fertilizer as a co-product.</p>
                     <div class="spec">AMI–Enviro SPV</div>
                 </div>
                 <div class="product-card reveal">
-                    <div class="prod-icon ink-bg">📊</div>
+                    <div class="prod-photo"><img src="g-plastic-truck.jpg" alt="Dispatched AFR bales tracked end-to-end" loading="lazy"></div>
                     <h3>Track-Trace-Audit MRV</h3>
                     <p>Every tonne of feedstock and fuel tracked end-to-end — MRV-ready chain of custody and verified CO₂-abatement documentation.</p>
                     <div class="spec">Audit-ready</div>
